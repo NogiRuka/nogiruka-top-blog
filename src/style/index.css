@@ -1,0 +1,21 @@
+a {
+    /* padding: 2px; */
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    padding: 3px;
+}
+
+a:hover {
+    border: 1px solid #17d72b;
+    background-color: #17d72b;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
