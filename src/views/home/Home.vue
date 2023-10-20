@@ -2,15 +2,26 @@
     <div class="w-full h-screen bg-cover" style="background-image: url('src/assets/img/bg.png')">
         <Header />
         <!-- 请注意，以下的示例包含超链接，您可能需要手动配置样式使其不变色。如果您嫌麻烦，可以移除。 -->
-        <div id="hitokoto" class="absolute top-1/2 left-1/2 centered-element"
-            style='font-size: 20px; font-family: " Times New Roman",Georgia,Serif;'>
-            <div class="bg-gray rounded-lg p-5px flex flex-nowrap text-xl ">
-                <a href="#" target="_blank" id="hitokoto_text" style="color:white;">:D 获取中...</a>
-                <a style="color:white;">——</a>
-                <a id="from_who" style="color:white;"></a>
-                <a style="color:white;"> 「</a>
-                <a id="from" style="color:white;"></a>
-                <a style="color:white;">」</a>
+        <div id="hitokoto" class="absolute top-1/2 left-1/2 centered-element ">
+            <div class="bg-transparent backdrop-blur-lg rounded-lg text-xl justify-center px-6   w-180 h-60 flex flex-col justify-items-stretch  heti font-qingke
+                ">
+
+                <div class="pt-5 !text-3xl mb-1 ">
+                    <a href="#" target="_blank" id="hitokoto_text" class="font-qingke">
+                        (＾ｖ＾) 小兔子正在努力加载中...
+                    </a>
+                </div>
+                <div class="flex flex-nowrap justify-end text-right mt-4 text-2xl">
+                    <p>
+                        ——
+                        <span id="from_who"></span>
+                        「
+                        <span id="from"></span>
+                        」
+                    </p>
+                </div>
+
+
             </div>
         </div>
     </div>
@@ -54,7 +65,30 @@ fetch('https://v1.hitokoto.cn?c=d&c=i&c=l')
 
 </script>
     
-<style>
+<style scoped>
+@font-face {
+    font-family: "qingke";
+    src: url("/src/assets/fonts/qingke.TTF") format("truetype")
+}
+
+.font-qingke {
+    font-family: 'qingke', sans-serif;
+}
+
+:root {
+    --text-color: #17d72b;
+}
+
+a,
+p {
+    color: white;
+    text-shadow: 1px 2px 0 #17d72b,
+        -1px -1px 0 #17d72b,
+        1px -1px 0 #17d72b,
+        -1px 1px 0 #17d72b,
+        1px 1px 0 #17d72b;
+}
+
 .centered-element {
     transform: translate(-50%, -50%);
 }

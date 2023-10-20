@@ -10,7 +10,8 @@ import Timeline from '@/views/timeline/Timeline.vue';
 const routes: Array<RouteRecordRaw> = [
     {
         path: "/",
-        redirect: "/home"
+        name: 'Index',
+        component: Home
     },
     {
         path: '/home',

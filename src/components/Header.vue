@@ -1,48 +1,44 @@
 <template>
     <div class="mt-0 p-2 bg-sky-500/50 z-50 flex justify-between">
         <div class="justify-inherit mr-4px flex flex-nowrap m-5px">
-            <router-link to="/home">
+            <router-link to="/">
                 <!-- <div class="i-fluent-emoji-flat-rabbit" /> -->
-                <img src="/favicon.png" class="w-auto" />のぎるか
+                <img src="/nogiruka-logo.svg" class="w-6 h-6 pr-1" />
+                <span>のぎるか</span>
             </router-link>
         </div>
         <div class="justify-end ml-4px flex z-20">
-            <div class="m-5px">
+            <div class="m-1 flex ">
                 <router-link to="/home">
-                    <div class="nogiruka-logo" />首页
+                    <div class="i-carbon:home pr-1" />首页
                 </router-link>
             </div>
-            <div class="m-5px">
-                <router-link to="/home">
-                    <div class="i-carbon:home" />首页
-                </router-link>
-            </div>
-            <div class="m-5px">
+            <div class="m-1 flex">
                 <router-link to="/archives">
-                    <div class="i-carbon:archive" />存档
+                    <div class="i-carbon:archive pr-1" />存档
                 </router-link>
             </div>
-            <div class="m-5px">
+            <div class="m-1 flex">
                 <router-link to="/categories">
                     <div class="i-carbon:category" />分类
                 </router-link>
             </div>
-            <div class="m-5px">
+            <div class="m-1 flex">
                 <router-link to="/tags">
                     <div class="i-carbon:tag-group" />标签
                 </router-link>
             </div>
-            <div class="m-5px">
+            <div class="m-1 flex">
                 <router-link to="/about">
                     <div class="i-tabler:mood-heart" />关于
                 </router-link>
             </div>
-            <div class="m-5px">
+            <div class="m-1 flex">
                 <router-link to="/links">
                     <div class="i-carbon:link" />友人帐
                 </router-link>
             </div>
-            <div class="m-5px">
+            <div class="m-1 flex">
                 <router-link to="/timeline">
                     <div class="i-carbon:document-sentiment" />时光轴
                 </router-link>
@@ -88,7 +84,16 @@ setInterval(createTime, 250);
 </script>
 
     
-<style>
+<style scoped>
+a {
+    color: white;
+}
+
+a:hover {
+    border: 1px solid #17d72b;
+    background-color: #70e97c;
+}
+
 .text-with-shadow {
     color: rgb(255, 255, 255);
     /* 设置文字颜色 */
