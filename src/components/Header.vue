@@ -2,10 +2,16 @@
     <div class="mt-0 p-2 bg-sky-500/50 z-50 flex justify-between">
         <div class="justify-inherit mr-4px flex flex-nowrap m-5px">
             <router-link to="/home">
-                <div class="i-fluent-emoji-flat-rabbit" />乃木流架
+                <!-- <div class="i-fluent-emoji-flat-rabbit" /> -->
+                <img src="/favicon.png" class="w-auto" />のぎるか
             </router-link>
         </div>
         <div class="justify-end ml-4px flex z-20">
+            <div class="m-5px">
+                <router-link to="/home">
+                    <div class="nogiruka-logo" />首页
+                </router-link>
+            </div>
             <div class="m-5px">
                 <router-link to="/home">
                     <div class="i-carbon:home" />首页

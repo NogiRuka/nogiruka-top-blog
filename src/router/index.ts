@@ -9,9 +9,8 @@ import Timeline from '@/views/timeline/Timeline.vue';
 
 const routes: Array<RouteRecordRaw> = [
     {
-        path: '/',
-        name: 'Home',
-        component: Home
+        path: "/",
+        redirect: "/home"
     },
     {
         path: '/home',
