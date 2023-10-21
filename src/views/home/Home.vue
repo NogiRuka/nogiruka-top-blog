@@ -3,7 +3,7 @@
         <Header />
         <!-- 请注意，以下的示例包含超链接，您可能需要手动配置样式使其不变色。如果您嫌麻烦，可以移除。 -->
         <div id="hitokoto" class="absolute top-1/2 left-1/2 centered-element ">
-            <div class="bg-transparent backdrop-blur-lg rounded-lg text-xl justify-center px-6   w-180 h-60 flex flex-col justify-items-stretch  heti font-qingke
+            <div class="bg-transparent backdrop-blur-4px rounded-lg text-xl justify-center px-6   w-180 h-60 flex flex-col justify-items-stretch  heti font-qingke
                 ">
 
                 <div class="pt-5 !text-3xl mb-1 ">
@@ -44,7 +44,7 @@ j	网易云
 k	哲学
 l	抖机灵
 */
-fetch('https://v1.hitokoto.cn?c=d&c=i&c=l')
+fetch('https://v1.hitokoto.cn?c=d&c=i&c=k')
     .then((response: Response) => response.json())
     .then((data: {
         uuid: string;
@@ -68,25 +68,17 @@ fetch('https://v1.hitokoto.cn?c=d&c=i&c=l')
 <style scoped>
 @font-face {
     font-family: "qingke";
-    src: url("/src/assets/fonts/qingke.TTF") format("truetype")
+    src: url("/src/assets/fonts/qingke.ttf") format("truetype")
 }
 
 .font-qingke {
     font-family: 'qingke', sans-serif;
 }
 
-:root {
-    --text-color: #17d72b;
-}
-
 a,
 p {
     color: white;
-    text-shadow: 1px 2px 0 #17d72b,
-        -1px -1px 0 #17d72b,
-        1px -1px 0 #17d72b,
-        -1px 1px 0 #17d72b,
-        1px 1px 0 #17d72b;
+    text-shadow: 1px 0 4px black;
 }
 
 .centered-element {

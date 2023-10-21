@@ -16,7 +16,7 @@ h1 {
 
 @font-face {
     font-family: "qingke";
-    src: url("/src/assets/fonts/qingke.TTF") format("truetype")
+    src: url("/src/assets/fonts/qingke.ttf") format("truetype")
 }
 
 .font-qingke {

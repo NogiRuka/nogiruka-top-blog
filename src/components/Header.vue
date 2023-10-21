@@ -1,44 +1,47 @@
 <template>
-    <div class="mt-0 p-2 bg-sky-500/50 z-50 flex justify-between">
-        <div class="justify-inherit mr-4px flex flex-nowrap m-5px">
+    <div class="mt-0 p-2 bg-sky-500/50 z-50 flex justify-between rounded-lg">
+        <div class="justify-inherit flex flex-nowrap">
             <router-link to="/">
-                <!-- <div class="i-fluent-emoji-flat-rabbit" /> -->
                 <img src="/nogiruka-logo.svg" class="w-6 h-6 pr-1" />
-                <span>のぎるか</span>
+                <span class="logo">乃木流架
+                    <span class="big-logo">
+                        <img src="/nogiruka-logo.svg" class="w-150 h-150" />
+                    </span>
+                </span>
             </router-link>
         </div>
-        <div class="justify-end ml-4px flex z-20">
-            <div class="m-1 flex ">
+        <div class="justify-end flex z-20">
+            <div class="mx-1  flex ">
                 <router-link to="/home">
-                    <div class="i-carbon:home pr-1" />首页
+                    <div class="i-carbon:home " />首页
                 </router-link>
             </div>
-            <div class="m-1 flex">
+            <div class="mx-1 flex">
                 <router-link to="/archives">
-                    <div class="i-carbon:archive pr-1" />存档
+                    <div class="i-carbon:archive " />存档
                 </router-link>
             </div>
-            <div class="m-1 flex">
+            <div class="mx-1 flex">
                 <router-link to="/categories">
                     <div class="i-carbon:category" />分类
                 </router-link>
             </div>
-            <div class="m-1 flex">
+            <div class="mx-1  flex">
                 <router-link to="/tags">
                     <div class="i-carbon:tag-group" />标签
                 </router-link>
             </div>
-            <div class="m-1 flex">
+            <div class="mx-1 flex">
                 <router-link to="/about">
                     <div class="i-tabler:mood-heart" />关于
                 </router-link>
             </div>
-            <div class="m-1 flex">
+            <div class=" mx-1 flex">
                 <router-link to="/links">
                     <div class="i-carbon:link" />友人帐
                 </router-link>
             </div>
-            <div class="m-1 flex">
+            <div class=" mx-1 flex">
                 <router-link to="/timeline">
                     <div class="i-carbon:document-sentiment" />时光轴
                 </router-link>
@@ -46,8 +49,8 @@
         </div>
     </div>
 
-    <footer class="fixed p-6 bottom-0 w-full">
-        <div class="text-center font-bold text-with-shadow">
+    <footer class="fixed p-4 bottom-0 w-full">
+        <div class="text-center font-medium text-with-shadow">
             <span id="timeDate"></span><span id="times"><i class="fa fa-spinner fa-spin"></i></span>
             <span id="busuanzi_container_site_pv">，浏览量：<span id="busuanzi_value_site_pv"><i
                         class="fa fa-spinner fa-spin"></i></span> 次</span>
@@ -86,18 +89,43 @@ setInterval(createTime, 250);
     
 <style scoped>
 a {
+    /* border: 1px dashed tomato; */
+    border: 1px solid transparent;
     color: white;
+    /* background-color: aquamarine; */
 }
 
 a:hover {
-    border: 1px solid #17d72b;
-    background-color: #70e97c;
+    border: 1px dashed #fcd8d8;
+    /* background-color: #70e97c; */
 }
 
 .text-with-shadow {
     color: rgb(255, 255, 255);
     /* 设置文字颜色 */
-    text-shadow: 2px 2px 0 #17d72b, -1px -1px 0 #17d72b, 1px -1px 0 #17d72b, -1px 1px 0 #17d72b, 1px 1px 0 #17d72b;
+    /* text-shadow: 2px 2px 0 #17d72b,
+        -1px -1px 0 #17d72b,
+        1px -1px 0 #17d72b,
+        -1px 1px 0 #17d72b,
+        1px 1px 0 #17d72b; */
+    text-shadow: 2px 0 4px black;
     /* 设置文字阴影 */
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+}
+
+.big-logo {
+    position: absolute;
+    top: 30px;
+    left: -88px;
+    z-index: 50;
+    display: none;
+}
+
+.logo:hover .big-logo {
+    display: block;
 }
 </style>

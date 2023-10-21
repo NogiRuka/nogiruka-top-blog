@@ -25,6 +25,32 @@
             background-color: #d5e8d4;
             padding: 10px;
         }
+
+        .image-link {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image-link::before {
+            content: "";
+            position: absolute;
+            bottom: -100%;
+            /* 调整图片显示位置，可以根据需要进行调整 */
+            left: 0;
+            width: 200px;
+            /* 调整图片容器的宽度 */
+            height: 200px;
+            /* 调整图片容器的高度 */
+            background-image: url("/public/nogiruka-logo.svg");
+            /* 替换为你自己的图片路径 */
+            background-size: cover;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .image-link:hover::before {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -37,6 +63,7 @@
             <span class="font-qingke">——苏轼「临江仙·送钱穆父」</span>
         </div>
     </div>
+    <a href="#" class="image-link border-blue"><img src="/public/nogiruka-logo.svg" width="20px" height="20px" /></a>
 </body>
 <style>
 
