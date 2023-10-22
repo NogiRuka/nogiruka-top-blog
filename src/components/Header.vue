@@ -1,63 +1,65 @@
 <template>
-    <div class="mt-0 p-2 bg-sky-500/50 z-50 flex justify-between rounded-lg">
-        <div class="justify-inherit flex flex-nowrap z-20">
-            <router-link to="/">
-                <img src="/nogiruka-logo.svg" class="w-6 h-6 pr-1" />
-                <span class="logo">乃木流架
-                    <span class="big-logo">
-                        <img src="/nogiruka-logo.svg" class="w-150 h-150" />
+    <div class="w-full h-screen bg-cover" style="background-image: url('/bg.png')">
+        <div class="mt-0 p-2 bg-sky-500/50 z-50 flex justify-between rounded-b-lg">
+            <div class="justify-inherit flex flex-nowrap z-20">
+                <router-link to="/">
+                    <img src="/nogiruka-logo.svg" class="w-6 h-6 pr-1" />
+                    <span class="logo">乃木流架
+                        <span class="big-logo">
+                            <img src="/nogiruka-logo.svg" class="w-150 h-150" />
+                        </span>
                     </span>
-                </span>
-            </router-link>
+                </router-link>
+            </div>
+            <div class="justify-end flex z-20">
+                <div class="mx-1  flex ">
+                    <router-link to="/home">
+                        <div class="i-carbon:home " />首页
+                    </router-link>
+                </div>
+                <div class="mx-1 flex">
+                    <router-link to="/archives">
+                        <div class="i-carbon:archive " />存档
+                    </router-link>
+                </div>
+                <div class="mx-1 flex">
+                    <router-link to="/categories">
+                        <div class="i-carbon:category" />分类
+                    </router-link>
+                </div>
+                <div class="mx-1  flex">
+                    <router-link to="/tags">
+                        <div class="i-carbon:tag-group" />标签
+                    </router-link>
+                </div>
+                <div class="mx-1 flex">
+                    <router-link to="/about">
+                        <div class="i-tabler:mood-heart" />关于
+                    </router-link>
+                </div>
+                <div class=" mx-1 flex">
+                    <router-link to="/links">
+                        <div class="i-carbon:link" />友人帐
+                    </router-link>
+                </div>
+                <div class=" mx-1 flex">
+                    <router-link to="/timeline">
+                        <div class="i-carbon:document-sentiment" />时光轴
+                    </router-link>
+                </div>
+            </div>
         </div>
-        <div class="justify-end flex z-20">
-            <div class="mx-1  flex ">
-                <router-link to="/home">
-                    <div class="i-carbon:home " />首页
-                </router-link>
-            </div>
-            <div class="mx-1 flex">
-                <router-link to="/archives">
-                    <div class="i-carbon:archive " />存档
-                </router-link>
-            </div>
-            <div class="mx-1 flex">
-                <router-link to="/categories">
-                    <div class="i-carbon:category" />分类
-                </router-link>
-            </div>
-            <div class="mx-1  flex">
-                <router-link to="/tags">
-                    <div class="i-carbon:tag-group" />标签
-                </router-link>
-            </div>
-            <div class="mx-1 flex">
-                <router-link to="/about">
-                    <div class="i-tabler:mood-heart" />关于
-                </router-link>
-            </div>
-            <div class=" mx-1 flex">
-                <router-link to="/links">
-                    <div class="i-carbon:link" />友人帐
-                </router-link>
-            </div>
-            <div class=" mx-1 flex">
-                <router-link to="/timeline">
-                    <div class="i-carbon:document-sentiment" />时光轴
-                </router-link>
-            </div>
-        </div>
-    </div>
 
-    <footer class="fixed p-4 bottom-0 w-full">
-        <div class="text-center font-medium text-with-shadow">
-            <span id="timeDate"></span><span id="times"><i class="fa fa-spinner fa-spin"></i></span>
-            <span id="busuanzi_container_site_pv">，浏览量：<span id="busuanzi_value_site_pv"><i
-                        class="fa fa-spinner fa-spin"></i></span> 次</span>
-            <span id="busuanzi_container_site_uv">，访客数：<span id="busuanzi_value_site_uv"><i
-                        class="fa fa-spinner fa-spin"></i></span> 人</span>
-        </div>
-    </footer>
+        <footer class="fixed p-4 bottom-0 w-full">
+            <div class="text-center font-medium text-with-shadow">
+                <span id="timeDate"></span><span id="times"><i class="fa fa-spinner fa-spin"></i></span>
+                <span id="busuanzi_container_site_pv">，浏览量：<span id="busuanzi_value_site_pv"><i
+                            class="fa fa-spinner fa-spin"></i></span> 次</span>
+                <span id="busuanzi_container_site_uv">，访客数：<span id="busuanzi_value_site_uv"><i
+                            class="fa fa-spinner fa-spin"></i></span> 人</span>
+            </div>
+        </footer>
+    </div>
 </template>
 
 <script setup lang='ts'>

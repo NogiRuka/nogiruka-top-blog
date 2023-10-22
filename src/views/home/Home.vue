@@ -1,27 +1,25 @@
 <template>
-    <div class="w-full h-screen bg-cover" style="background-image: url('src/assets/imgs/bg.png')">
-        <Header />
-        <!-- 请注意，以下的示例包含超链接，您可能需要手动配置样式使其不变色。如果您嫌麻烦，可以移除。 -->
-        <div id="hitokoto" class="absolute top-1/2 left-1/2 centered-element ">
-            <div class="bg-transparent backdrop-blur-4px rounded-lg text-xl justify-center px-6 w-180 h-60 flex flex-col justify-items-stretch heti font-qingke
+    <Header />
+    <!-- 请注意，以下的示例包含超链接，您可能需要手动配置样式使其不变色。如果您嫌麻烦，可以移除。 -->
+    <div id="hitokoto" class="absolute top-1/2 left-1/2 centered-element ">
+        <div class="bg-transparent backdrop-blur-4px rounded-lg text-xl justify-center px-6 w-180 h-60 flex flex-col justify-items-stretch heti font-qingke
             ">
-                <div class="pt-5 !text-3xl mb-1 ">
-                    <a href="#" target="_blank" id="hitokoto_text" class="font-qingke">
-                        (＾ｖ＾) 小兔子正在努力加载中...
-                    </a>
-                </div>
-                <div class="flex flex-nowrap justify-end text-right mt-4 text-2xl">
-                    <p>
-                        ——
-                        <span id="from_who"></span>
-                        「
-                        <span id="from"></span>
-                        」
-                    </p>
-                </div>
-
-
+            <div class="pt-5 !text-3xl mb-1 ">
+                <a href="#" target="_blank" id="hitokoto_text" class="font-qingke">
+                    (＾ｖ＾) 小兔子正在努力加载中...
+                </a>
             </div>
+            <div class="flex flex-nowrap justify-end text-right mt-4 text-2xl">
+                <p>
+                    ——
+                    <span id="from_who"></span>
+                    「
+                    <span id="from"></span>
+                    」
+                </p>
+            </div>
+
+
         </div>
     </div>
 </template>

@@ -1,8 +1,6 @@
 <template>
-    <div class="w-full h-screen bg-cover" style="background-image: url('src/assets/imgs/bg.png')">
-        <Header />
-        <h1 class="text-center">Timeline</h1>
-    </div>
+    <Header />
+    <h1 class="text-center">Timeline</h1>
 </template>
     
 <script setup lang='ts'>
