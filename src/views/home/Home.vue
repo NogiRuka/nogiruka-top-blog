@@ -1,7 +1,7 @@
 <template>
     <Header />
     <!-- 请注意，以下的示例包含超链接，您可能需要手动配置样式使其不变色。如果您嫌麻烦，可以移除。 -->
-    <div id="hitokoto" class="absolute top-1/2 left-1/2 centered-element ">
+    <div id="hitokoto" class="absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-1/2">
         <div class="bg-transparent backdrop-blur-4px rounded-lg text-xl justify-center px-6 w-180 h-60 flex flex-col justify-items-stretch heti font-qingke
             ">
             <div class="pt-5 !text-3xl mb-1 ">

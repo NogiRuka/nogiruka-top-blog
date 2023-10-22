@@ -21,6 +21,7 @@
     "@types/node": "^20.8.7",
     "@unocss/preset-attributify": "^0.56.5",
     "@vitejs/plugin-vue": "^4.2.3",
+    "terser": "^5.22.0",
     "typescript": "^5.0.2",
     "unocss": "^0.56.5",
     "vite": "^4.4.5",
