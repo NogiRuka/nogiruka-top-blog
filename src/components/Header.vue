@@ -49,8 +49,6 @@
         </div>
     </div>
 
-    <!-- <div id="fireworks-container"></div> -->
-
     <footer class="fixed p-4 bottom-0 w-full">
         <div class="text-center font-medium text-with-shadow">
             <span id="timeDate"></span><span id="times"><i class="fa fa-spinner fa-spin"></i></span>
@@ -63,9 +61,6 @@
 </template>
 
 <script setup lang='ts'>
-
-
-
 
 // 引入不蒜子计数
 function createTime(): void {
@@ -95,23 +90,6 @@ setInterval(createTime, 250);
 
     
 <style scoped>
-#fireworks-container {
-    background-color: #fcd8d8;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
-
-.firework {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ff0000;
-    pointer-events: none;
-    animation: explode 1s forwards;
-}
-
 @keyframes explode {
     0% {
         transform: scale(1);
@@ -146,7 +124,7 @@ a:hover {
 
 .big-logo {
     position: absolute;
-    top: 30px;
+    top: 66px;
     left: -88px;
     z-index: 50;
     display: none;
