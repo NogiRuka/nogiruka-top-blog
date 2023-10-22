@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-screen bg-cover" style="background-image: url('src/assets/img/bg.png')">
+    <div class="w-full h-screen bg-cover" style="background-image: url('src/assets/imgs/bg.png')">
         <Header />
         <!-- 请注意，以下的示例包含超链接，您可能需要手动配置样式使其不变色。如果您嫌麻烦，可以移除。 -->
         <div id="hitokoto" class="absolute top-1/2 left-1/2 centered-element ">

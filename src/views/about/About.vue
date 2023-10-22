@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-screen bg-cover" style="background-image: url('src/assets/img/bg.png')">
+    <div class="w-full h-screen bg-cover" style="background-image: url('src/assets/imgs/bg.png')">
         <Header />
         <h1 class="text-center">About</h1>
     </div>
