@@ -89,27 +89,18 @@ setInterval(createTime, 250);
     
 <style scoped>
 a {
-    /* border: 1px dashed tomato; */
-    border: 1px solid transparent;
+    border: 1px dashed transparent;
     color: white;
     /* background-color: aquamarine; */
 }
 
 a:hover {
-    border: 1px dashed #fcd8d8;
-    /* background-color: #70e97c; */
+    border-color: #fcd8d8;
 }
 
 .text-with-shadow {
-    color: rgb(255, 255, 255);
-    /* 设置文字颜色 */
-    /* text-shadow: 2px 2px 0 #17d72b,
-        -1px -1px 0 #17d72b,
-        1px -1px 0 #17d72b,
-        -1px 1px 0 #17d72b,
-        1px 1px 0 #17d72b; */
+    color: white;
     text-shadow: 2px 0 4px black;
-    /* 设置文字阴影 */
 }
 
 .logo {
