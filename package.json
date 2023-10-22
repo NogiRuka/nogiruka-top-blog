@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "canvas-confetti": "^1.9.0",
     "normalize.css": "^8.0.1",
     "vue": "^3.3.4",
     "vue-router": "4"
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "1.0.0-beta.27",
     "@iconify/json": "^2.2.130",
+    "@types/canvas-confetti": "^1.6.2",
     "@types/node": "^20.8.7",
     "@unocss/preset-attributify": "^0.56.5",
     "@vitejs/plugin-vue": "^4.2.3",
