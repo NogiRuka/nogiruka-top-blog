@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import Home from '@/views/home/Home.vue';
-import Archives from '@/views/archives/Archives.vue';
-import Categories from '@/views/categories/Categories.vue';
-import Tags from '@/views/tags/Tags.vue';
-import About from '@/views/about/About.vue';
-import Links from '@/views/links/Links.vue';
-import Timeline from '@/views/timeline/Timeline.vue';
+
+import Home from '@/views/home/index.vue';
+import Archives from '@/views/archives/index.vue';
+import Categories from '@/views/categories/index.vue';
+import Tags from '@/views/tags/index.vue';
+import About from '@/views/about/index.vue';
+import Links from '@/views/links/index.vue';
+import Timeline from '@/views/timeline/index.vue';
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -56,4 +57,3 @@ const router = createRouter({
 });
 
 export default router;
-
