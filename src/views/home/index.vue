@@ -4,7 +4,7 @@
     <div id="hitokoto" class="absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-1/2">
         <div class="bg-transparent backdrop-blur-4px rounded-lg text-xl justify-center px-6 w-180 h-60 flex flex-col justify-items-stretch heti font-qingke
             ">
-            <div class="pt-5 !text-3xl mb-1 ">
+            <div class="pt-5 !text-3xl ">
                 <a href="#" target="_blank" id="hitokoto_text" class="font-qingke">
                     (＾ｖ＾) 小兔子正在努力加载中...
                 </a>
