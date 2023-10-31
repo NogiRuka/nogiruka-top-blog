@@ -63,14 +63,14 @@ fetch('https://v1.hitokoto.cn?c=d&c=i&c=k')
 </script>
     
 <style scoped>
-@font-face {
+/* @font-face {
     font-family: "qingke";
     src: url("/src/assets/fonts/qingke.ttf") format("truetype")
 }
 
 .font-qingke {
     font-family: 'qingke', sans-serif;
-}
+} */
 
 a,
 p {

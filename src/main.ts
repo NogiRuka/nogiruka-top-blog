@@ -6,9 +6,8 @@ import router from './router';
 // css
 import 'uno.css'
 import 'normalize.css'
-import '@/style/index.css'
-import '@/style/nogiruka-logo.css'
-// ts
+import '@/style/base.scss'
+// confetti
 import { initConfetti } from '@/utils/confetti.ts';
 document.addEventListener('click', (event: MouseEvent) => initConfetti(event));
 
