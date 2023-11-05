@@ -1,7 +1,7 @@
 <template>
     <Header />
     <!-- 请注意，以下的示例包含超链接，您可能需要手动配置样式使其不变色。如果您嫌麻烦，可以移除。 -->
-    <div id="hitokoto" class="absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-1/2">
+    <div id="hitokoto" class="  absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-1/2">
         <div class="bg-transparent backdrop-blur-4px rounded-lg text-xl justify-center px-6 w-180 h-60 flex flex-col justify-items-stretch heti font-qingke
             ">
             <div class="pt-5 !text-3xl ">
@@ -27,6 +27,23 @@
 <script setup lang='ts'>
 import Header from "@/components/Header.vue";
 
+import { Client } from "@notionhq/client"
+
+const notion = new Client({ auth: import.meta.env.VITE_NOTION_API_KEY });
+
+(async () => {
+    const databaseId = import.meta.env.VITE_NOTION_PAGE_ID;
+    console.log(`output->databaseId`, databaseId)
+    const response = await notion.databases.retrieve({ database_id: databaseId });
+    console.log(response);
+})();
+
+// console.log(`output->import.meta.env`, import.meta.env)
+// console.log(`output->import.meta.env.VITE_NOTION_PAGE_ID`, import.meta.env.VITE_NOTION_PAGE_ID)
+
+
+//todo 一言展示组件封装及ui优化
+
 /*
 a	动画
 b	漫画
@@ -49,7 +66,7 @@ fetch('https://v1.hitokoto.cn?c=d&c=i&c=k')
         from_who: string;
         from: string;
     }) => {
-        console.log(data);
+        console.log(`output->一言接口返回数据`, data)
         const hitokoto = document.querySelector('#hitokoto_text') as HTMLAnchorElement;
         const from_who = document.querySelector('#from_who') as HTMLElement;
         const from = document.querySelector('#from') as HTMLElement;
