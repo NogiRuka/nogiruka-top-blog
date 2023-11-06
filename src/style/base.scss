@@ -1,3 +1,5 @@
+@use 'font';
+
 a {
     /* padding: 2px; */
     display: flex;
@@ -12,13 +14,4 @@ h1 {
     font-size: 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
-}
-
-@font-face {
-    font-family: "qingke";
-    src: url("/src/assets/fonts/qingke.ttf") format("truetype")
-}
-
-.font-qingke {
-    font-family: 'qingke', sans-serif;
 }

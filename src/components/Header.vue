@@ -1,6 +1,6 @@
 <template>
     <div class="w-full h-screen bg-cover" style="background-image: url('/bg-5.webp')">
-        <div class="bg-transparent backdrop-blur-xl mt-0 p-2  z-50 flex justify-between rounded-b-lg">
+        <div class="bg-transparent backdrop-blur-xl mt-0 p-2  z-50 flex justify-between rounded-b-lg shadow-xl">
             <div class="justify-inherit flex flex-nowrap z-20">
                 <router-link to="/">
                     <img src="/nogiruka-logo.svg" class="w-6 h-6 pr-1" />

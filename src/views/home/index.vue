@@ -1,11 +1,11 @@
 <template>
     <Header />
     <!-- 请注意，以下的示例包含超链接，您可能需要手动配置样式使其不变色。如果您嫌麻烦，可以移除。 -->
-    <div id="hitokoto" class="  absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-1/2">
+    <div id="hitokoto" class="hidden  absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-1/2">
         <div class="bg-transparent backdrop-blur-4px rounded-lg text-xl justify-center px-6 w-180 h-60 flex flex-col justify-items-stretch heti font-qingke
             ">
             <div class="pt-5 !text-3xl ">
-                <a href="#" target="_blank" id="hitokoto_text" class="font-qingke">
+                <a href="#" target="_blank" id="hitokoto_text">
                     (＾ｖ＾) 小兔子正在努力加载中...
                 </a>
             </div>
@@ -18,14 +18,14 @@
                     」
                 </p>
             </div>
-
-
         </div>
     </div>
+    <Display />
 </template>
     
 <script setup lang='ts'>
 import Header from "@/components/Header.vue";
+import Display from '@/components/Display.vue'
 
 import { Client } from "@notionhq/client"
 
@@ -79,7 +79,7 @@ fetch('https://v1.hitokoto.cn?c=d&c=i&c=k')
 
 </script>
     
-<style scoped>
+<style lang="scss" scoped>
 /* @font-face {
     font-family: "qingke";
     src: url("/src/assets/fonts/qingke.ttf") format("truetype")
