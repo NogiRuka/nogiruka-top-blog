@@ -1,5 +1,5 @@
 <template>
-    <footer class="my-8  bottom-0  bg-white heti--classic">
+    <footer class="box-shadow py-6  bottom-0  bg-white heti--classic">
         <div class="text-center text-xl text-with-shadow">
             <span id="timeDate"></span><span id="times"><i class="fa fa-spinner fa-spin"></i></span>
             <span id="busuanzi_container_site_pv">，浏览量：<span id="busuanzi_value_site_pv"><i
@@ -36,4 +36,8 @@ setInterval(createTime, 250);
 
 </script>
     
-<style></style>
+<style>
+.box-shadow {
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+}
+</style>

@@ -9,8 +9,8 @@ export function initConfetti(event: MouseEvent) {
         scalar: 0.8,
         decay: 0.9,
         shapes: ['circle', 'square'],
-        // colors: ['#ffffff', '#ff0000', '#fcd8d8'],
-        colors: ['#fdfcff', '#d28da4', '#c8322e'],
+        colors: ['#ffffff', '#ff0000', '#d28da4', '#fcd8d8'],
+        // colors: ['#fdfcff', '#d28da4', '#c8322e'],
         origin: {
             x: event.clientX / window.innerWidth,
             y: event.clientY / window.innerHeight
