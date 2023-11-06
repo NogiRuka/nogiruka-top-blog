@@ -1,6 +1,6 @@
 <template>
     <div class="w-full  bg-[#f8f9fa] flex justify-center">
-        <div class=" w-4/6  bg-white my-4 p-8 rounded  shadow-xl">
+        <div class=" w-4/6  bg-white my-4 mb-16 p-8 rounded  shadow-xl">
             <div class="composition-content font-oudie">
                 <p></p>
                 <div class="text-5xl tooltip-text"><a

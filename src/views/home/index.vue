@@ -21,11 +21,13 @@
         </div>
     </div>
     <Display />
+    <Footer />
 </template>
     
 <script setup lang='ts'>
-import Header from "@/components/Header.vue";
+import Header from "@/components/Header.vue"
 import Display from '@/components/Display.vue'
+import Footer from '@/components/Footer.vue'
 
 import { Client } from "@notionhq/client"
 

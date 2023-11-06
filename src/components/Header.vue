@@ -49,16 +49,6 @@
                 </div>
             </div>
         </div>
-
-        <footer class="fixed p-4 bottom-0 w-full">
-            <div class="text-center font-medium text-with-shadow">
-                <span id="timeDate"></span><span id="times"><i class="fa fa-spinner fa-spin"></i></span>
-                <span id="busuanzi_container_site_pv">，浏览量：<span id="busuanzi_value_site_pv"><i
-                            class="fa fa-spinner fa-spin"></i></span> 次</span>
-                <span id="busuanzi_container_site_uv">，访客数：<span id="busuanzi_value_site_uv"><i
-                            class="fa fa-spinner fa-spin"></i></span> 人</span>
-            </div>
-        </footer>
     </div>
 </template>
 
