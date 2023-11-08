@@ -1,6 +1,5 @@
 <template>
     <Header />
-    <!-- 请注意，以下的示例包含超链接，您可能需要手动配置样式使其不变色。如果您嫌麻烦，可以移除。 -->
     <div id="hitokoto" class=" absolute top-1/2 left-1/2 -translate-x-1/5 -translate-y-1/2 backdrop-blur-sm">
         <div class="bg-transparent  rounded-lg text-xl justify-center px-6 w-180 h-60 flex flex-col justify-items-stretch heti font-qingke
             ">
@@ -40,9 +39,7 @@ const notion = new Client({ auth: import.meta.env.VITE_NOTION_API_KEY });
     console.log(response);
 })();
 
-// console.log(`output->import.meta.env`, import.meta.env)
-// console.log(`output->import.meta.env.VITE_NOTION_PAGE_ID`, import.meta.env.VITE_NOTION_PAGE_ID)
-
+//todo 响应式布局
 
 //todo 一言展示组件封装及ui优化
 

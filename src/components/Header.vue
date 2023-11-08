@@ -1,8 +1,8 @@
 <template>
     <div class="w-full h-screen bg-cover" style="background-image: url('/bg-5.webp')">
         <div
-            class="text-with-shadow heti--classic bg-transparent backdrop-blur-xl mt-0 p-2  z-50 flex justify-between rounded-b-lg shadow-xl">
-            <div class="justify-inherit flex flex-nowrap z-20 ">
+            class=" heti--classic bg-transparent backdrop-blur-xl mt-0 p-2  z-50 flex justify-between rounded-b-lg shadow-xl ">
+            <div class=" justify-inherit flex flex-nowrap z-20 ">
                 <router-link to="/">
                     <img src="/nogiruka-logo.svg" class="w-6 h-6 pr-1" />
                     <span class="logo ">乃木流架
@@ -15,37 +15,44 @@
             <div class="justify-end flex z-20">
                 <div class="mx-1  flex ">
                     <router-link to="/home">
-                        <div class="i-carbon:home " />首页
+                        <i i-carbon-home />首页
                     </router-link>
                 </div>
-                <div class="mx-1 flex">
-                    <router-link to="/archives">
-                        <div class="i-carbon:archive " />存档
+                <div class="mx-1  flex ">
+                    <router-link to="/home">
+                        <i i-iconoir-page />文章
                     </router-link>
-                </div>
-                <div class="mx-1 flex">
-                    <router-link to="/categories">
-                        <div class="i-carbon:category" />分类
-                    </router-link>
-                </div>
-                <div class="mx-1  flex">
-                    <router-link to="/tags">
-                        <div class="i-carbon:tag-group" />标签
-                    </router-link>
+                    <ul class="top-8 list-none absolute bg-white ">
+                        <li>
+                            <router-link text-black to="/archives">
+                                <i i-octicon-archive-24 />归档
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="/categories">
+                                <i i-carbon-data-vis-1 />分类
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="/tags">
+                                <i i-carbon:tag-group />标签
+                            </router-link>
+                        </li>
+                    </ul>
                 </div>
                 <div class="mx-1 flex">
                     <router-link to="/about">
-                        <div class="i-tabler:mood-heart" />关于
+                        <i i-tabler:mood-heart />关于
                     </router-link>
                 </div>
                 <div class=" mx-1 flex">
                     <router-link to="/links">
-                        <div class="i-carbon:link" />友人帐
+                        <i i-solar-link-round-angle-linear />友人帐
                     </router-link>
                 </div>
                 <div class=" mx-1 flex">
                     <router-link to="/timeline">
-                        <div class="i-carbon:document-sentiment" />时光轴
+                        <i i-carbon:document-sentiment />时光轴
                     </router-link>
                 </div>
             </div>
@@ -85,21 +92,9 @@ setInterval(createTime, 250);
 
     
 <style scoped>
-@keyframes explode {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(10);
-        opacity: 0;
-    }
-}
-
 a {
     border: 1px dashed transparent;
-    color: white;
+    /* color: white; */
     /* background-color: aquamarine; */
 }
 
