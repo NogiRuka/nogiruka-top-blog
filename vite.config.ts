@@ -8,7 +8,6 @@ import UnoCSS from 'unocss/vite'
 
 
 // https://vitejs.dev/config/
-// defineConfig 工具函数，这样不用 jsdoc 注解也可以获取类型提示
 export default defineConfig({
   plugins: [vue(), UnoCSS(),],
   resolve: {
