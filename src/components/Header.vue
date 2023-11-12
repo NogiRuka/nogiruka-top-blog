@@ -50,8 +50,8 @@
                     </a>
                 </div>
                 <div class=" mx-1 flex">
-                    <router-link to="/links">
-                        <i i-solar-link-round-angle-linear />{{ t('header.links') }}
+                    <router-link to="/friends">
+                        <i i-solar-link-round-angle-linear />{{ t('header.friends') }}
                     </router-link>
                 </div>
                 <div class=" mx-1 flex">

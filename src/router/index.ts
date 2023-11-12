@@ -1,53 +1,45 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
-import Home from '@/views/home/index.vue';
-import Archives from '@/views/archives/index.vue';
-import Categories from '@/views/categories/index.vue';
-import Tags from '@/views/tags/index.vue';
-import About from '@/views/about/index.vue';
-import Links from '@/views/links/index.vue';
-import Timeline from '@/views/timeline/index.vue';
-
 const routes: Array<RouteRecordRaw> = [
     {
         path: "/",
         name: 'Index',
-        component: Home
+        component: () => import('@/views/home/index.vue'),
     },
     {
         path: '/home',
         name: 'Home',
-        component: Home
+        component: () => import('@/views/home/index.vue'),
     },
     {
         path: '/archives',
         name: 'Archives',
-        component: Archives
+        component: () => import('@/views/archives/index.vue'),
     },
     {
         path: '/categories',
         name: 'Categories',
-        component: Categories
+        component: () => import('@/views/categories/index.vue'),
     },
     {
         path: '/tags',
         name: 'Tags',
-        component: Tags
+        component: () => import('@/views/tags/index.vue'),
     },
     {
         path: '/about',
         name: 'About',
-        component: About
+        component: () => import('@/views/about/index.vue'),
     },
     {
-        path: '/links',
-        name: 'Links',
-        component: Links
+        path: '/friends',
+        name: 'Friends',
+        component: () => import('@/views/friends/index.vue'),
     },
     {
         path: '/timeline',
         name: 'Timeline',
-        component: Timeline
+        component: () => import('@/views/timeline/index.vue'),
     }
 ];
 
