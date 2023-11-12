@@ -1,7 +1,9 @@
 import { defineConfig } from 'vite'
+import { resolve } from "path"
 // 提供 Vue 3 单文件组件支持,在插件中使用
 import vue from '@vitejs/plugin-vue'
-import { resolve } from "path"
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
+
 
 // UnoCSS
 import UnoCSS from 'unocss/vite'
@@ -9,7 +11,12 @@ import UnoCSS from 'unocss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), UnoCSS(),],
+  plugins: [vue(), UnoCSS(), , VueI18nPlugin({
+    runtimeOnly: true,
+    compositionOnly: true,
+    fullInstall: true,
+    include: [resolve(__dirname, 'src/locales/lang/**')],
+  })],
   resolve: {
     alias: {
       //文件系统路径的别名, 绝对路径
@@ -17,9 +24,7 @@ export default defineConfig({
       "/imgs": "./src/assets/imgs",
     },
     // 使用路径别名时想要省略的后缀名
-    // 不建议忽略自定义导入类型的扩展名（例如：.vue）
-    // 因为它会影响 IDE 和类型支持。
-    extensions: ['.js', '.json', '.ts']
+    extensions: ['.js', '.json', '.ts', '.vue']
   },
 
   base: './',//打包的路径

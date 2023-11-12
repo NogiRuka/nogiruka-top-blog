@@ -6,26 +6,29 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@intlify/unplugin-vue-i18n": "^1.5.0",
     "@notionhq/client": "^2.2.13",
     "canvas-confetti": "^1.9.0",
     "normalize.css": "^8.0.1",
     "pinia": "^2.1.7",
     "vue": "^3.3.4",
-    "vue-i18n": "9",
+    "vue-i18n": "^9.5.0",
     "vue-router": "4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "1.0.0-beta.27",
+    "@antfu/eslint-config": "^1.1.0",
     "@iconify/json": "^2.2.130",
     "@types/canvas-confetti": "^1.6.2",
     "@types/node": "^20.8.7",
-    "@unocss/preset-attributify": "^0.56.5",
     "@vitejs/plugin-vue": "^4.2.3",
+    "eslint": "^8.53.0",
     "sass": "^1.69.5",
-    "terser": "^5.22.0",
+    "terser": "^5.24.0",
     "typescript": "^5.0.2",
     "unocss": "^0.56.5",
     "vite": "^4.4.5",

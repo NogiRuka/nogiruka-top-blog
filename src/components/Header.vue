@@ -4,8 +4,9 @@
             class=" heti--classic bg-transparent backdrop-blur-xl mt-0 p-2  z-50 flex justify-between rounded-b-lg shadow-xl ">
             <div class=" justify-inherit flex flex-nowrap z-20 ">
                 <router-link to="/">
+                    <h1>{{ t('name') }}</h1>
                     <img src="/nogiruka-logo.svg" class="w-6 h-6 pr-1" />
-                    <span class="logo ">乃木流架
+                    <span class="logo ">{{ t('name') }}
                         <span class="big-logo">
                             <img src="/nogiruka-logo.svg" class="w-150 h-150" />
                         </span>
@@ -15,17 +16,17 @@
             <div class="justify-end flex z-20">
                 <div class="mx-1  flex ">
                     <router-link to="/home">
-                        <i i-carbon-home />首页
+                        <i i-carbon-home />{{ t('home') }}
                     </router-link>
                 </div>
-                <div class="mx-1  flex ">
+                <div class="mx-1  flex hov">
                     <router-link to="/home">
                         <i i-iconoir-page />文章
                     </router-link>
-                    <ul class="top-8 list-none absolute bg-white ">
+                    <ul class="top-8 list-none absolute bg-white hidden subhov  ">
                         <li>
-                            <router-link text-black to="/archives">
-                                <i i-octicon-archive-24 />归档
+                            <router-link to="/archives" >
+                                <i i-octicon-archive-24 />{{ t('archives') }}
                             </router-link>
                         </li>
                         <li>
@@ -41,9 +42,12 @@
                     </ul>
                 </div>
                 <div class="mx-1 flex">
-                    <router-link to="/about">
+                    <!-- <router-link to="/about">
                         <i i-tabler:mood-heart />关于
-                    </router-link>
+                    </router-link> -->
+                    <a href="https://github.com/NogiRuka" target="_blank">
+                        <i i-tabler:mood-heart />关于
+                    </a>
                 </div>
                 <div class=" mx-1 flex">
                     <router-link to="/links">
@@ -65,7 +69,9 @@
 //todo 背景图片切换 图片来源显示
 
 
-
+// 导入useI18n
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 
 </script>
 
@@ -101,5 +107,15 @@ a:hover {
 
 .logo:hover .big-logo {
     display: block;
+}
+
+.hov:hover .subhov{
+
+    display: block
+    
+}
+
+.subhov a {
+    color: black;
 }
 </style>

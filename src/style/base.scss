@@ -1,4 +1,5 @@
-@use 'font';
+@use './common/font.scss';
+@use './common/scrollbar.scss';
 
 a {
     /* padding: 2px; */
