@@ -1,12 +1,12 @@
 <template>
     <div class="w-full h-screen bg-cover" style="background-image: url('/bg-5.webp')">
+        
         <div
             class=" heti--classic bg-transparent backdrop-blur-xl mt-0 p-2  z-50 flex justify-between rounded-b-lg shadow-xl ">
             <div class=" justify-inherit flex flex-nowrap z-20 ">
                 <router-link to="/">
-                    <h1>{{ t('name') }}</h1>
                     <img src="/nogiruka-logo.svg" class="w-6 h-6 pr-1" />
-                    <span class="logo ">{{ t('name') }}
+                    <span class="logo ">{{ t('header.name') }}
                         <span class="big-logo">
                             <img src="/nogiruka-logo.svg" class="w-150 h-150" />
                         </span>
@@ -16,47 +16,47 @@
             <div class="justify-end flex z-20">
                 <div class="mx-1  flex ">
                     <router-link to="/home">
-                        <i i-carbon-home />{{ t('home') }}
+                        <i i-carbon-home />{{ t('header.home') }}
                     </router-link>
                 </div>
                 <div class="mx-1  flex hov">
                     <router-link to="/home">
-                        <i i-iconoir-page />文章
+                        <i i-iconoir-page />{{ t('header.articles') }}
                     </router-link>
                     <ul class="top-8 list-none absolute bg-white hidden subhov  ">
                         <li>
                             <router-link to="/archives" >
-                                <i i-octicon-archive-24 />{{ t('archives') }}
+                                <i i-octicon-archive-24 />{{ t('header.archives') }}
                             </router-link>
                         </li>
                         <li>
                             <router-link to="/categories">
-                                <i i-carbon-data-vis-1 />分类
+                                <i i-carbon-data-vis-1 />{{ t('header.categories') }}
                             </router-link>
                         </li>
                         <li>
                             <router-link to="/tags">
-                                <i i-carbon:tag-group />标签
+                                <i i-carbon:tag-group />{{ t('header.tags') }}
                             </router-link>
                         </li>
                     </ul>
                 </div>
                 <div class="mx-1 flex">
                     <!-- <router-link to="/about">
-                        <i i-tabler:mood-heart />关于
+                        <i i-tabler:mood-heart />{{ t('header.about') }}
                     </router-link> -->
                     <a href="https://github.com/NogiRuka" target="_blank">
-                        <i i-tabler:mood-heart />关于
+                        <i i-tabler:mood-heart />{{ t('header.about') }}
                     </a>
                 </div>
                 <div class=" mx-1 flex">
                     <router-link to="/links">
-                        <i i-solar-link-round-angle-linear />友人帐
+                        <i i-solar-link-round-angle-linear />{{ t('header.links') }}
                     </router-link>
                 </div>
                 <div class=" mx-1 flex">
                     <router-link to="/timeline">
-                        <i i-carbon:document-sentiment />时光轴
+                        <i i-carbon:document-sentiment />{{ t('header.timeline') }}
                     </router-link>
                 </div>
             </div>

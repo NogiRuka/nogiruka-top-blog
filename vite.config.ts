@@ -1,17 +1,13 @@
 import { defineConfig } from 'vite'
 import { resolve } from "path"
-// 提供 Vue 3 单文件组件支持,在插件中使用
 import vue from '@vitejs/plugin-vue'
-import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
-
-
-// UnoCSS
 import UnoCSS from 'unocss/vite'
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), UnoCSS(), , VueI18nPlugin({
+  plugins: [vue(), UnoCSS(), VueI18nPlugin({
     runtimeOnly: true,
     compositionOnly: true,
     fullInstall: true,

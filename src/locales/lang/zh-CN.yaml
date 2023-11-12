@@ -1,3 +1,10 @@
-name: 乃木流架
-home: 首页
-archives: 存档
+header:
+  name: 乃木流架
+  home: 首页
+  articles: 文章
+  archives: 存档
+  categories: 分类
+  tags: 标签
+  about: 关于
+  links: 友人帐
+  timeline: 时光轴
