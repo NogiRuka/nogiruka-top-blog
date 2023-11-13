@@ -37,6 +37,9 @@ devDependencies:
   '@iconify/json':
     specifier: ^2.2.130
     version: 2.2.130
+  '@iconify/utils':
+    specifier: ^2.1.11
+    version: 2.1.11
   '@types/canvas-confetti':
     specifier: ^1.6.2
     version: 1.6.2

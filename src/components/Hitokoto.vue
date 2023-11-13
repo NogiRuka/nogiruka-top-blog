@@ -8,7 +8,7 @@
                   </a>
               </div>
               <div class="flex flex-nowrap justify-end text-right mt-4 text-2xl">
-                  <p>
+                  <p class="">
                       ——
                       <span id="from_who"></span>
                       「

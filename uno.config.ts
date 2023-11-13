@@ -1,4 +1,5 @@
 // uno.config.ts
+import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
 import {
     defineConfig,
     presetAttributify,
@@ -22,7 +23,16 @@ export default defineConfig({
     presets: [
         presetUno(),
         presetAttributify(),
-        presetIcons(),
+        presetIcons({
+            collections: {
+                icon: FileSystemIconLoader(
+                    './src/assets/svg',
+                    svg => svg.replace(/#FFF/, 'currentColor'),
+                ),
+            },
+            scale: 1.5,
+            warn: true,
+        }),
         presetTypography(),
         presetWebFonts({
             fonts: {
