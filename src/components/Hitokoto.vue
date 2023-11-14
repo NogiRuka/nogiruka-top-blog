@@ -1,14 +1,14 @@
 <template>
-        <div id="hitokoto" class=" absolute top-1/2 left-1/2 -translate-x-1/5 -translate-y-1/2 backdrop-blur-sm">
+        <div id="hitokoto" class=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-sm">
           <div class="bg-transparent  rounded-lg text-xl justify-center px-6 w-180 h-60 flex flex-col justify-items-stretch heti font-qingke
             ">
               <div class="pt-5 !text-3xl ">
                   <a href="#" target="_blank" id="hitokoto_text">
-                      {{ t('hitokoto.loading') }}
+                      {{ $t('hitokoto.loading') }}
                   </a>
               </div>
               <div class="flex flex-nowrap justify-end text-right mt-4 text-2xl">
-                  <p class="">
+                  <p class="text-white">
                       ——
                       <span id="from_who"></span>
                       「
@@ -21,8 +21,6 @@
 </template>
   
 <script lang='ts' setup>
-import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
 /*
 a	动画
 b	漫画
@@ -58,5 +56,5 @@ fetch('https://v1.hitokoto.cn?c=d&c=i&c=k')
 </script>
   
 <style lang='scss' scoped>
-  
+
 </style>

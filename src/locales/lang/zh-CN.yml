@@ -10,3 +10,6 @@ header:
   timeline: 时光轴
 hitokoto:
   loading: 下句是...?
+global:
+  toggle_dark: 切换深色模式
+  toggle_langs: 切换语言

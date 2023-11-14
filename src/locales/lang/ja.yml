@@ -1,0 +1,15 @@
+header:
+  name: 乃木流架
+  home: ホーム
+  articles: 記事
+  archives: アーカイブ
+  categories: カテゴリー
+  tags: ラベル
+  about: について
+  friends: 友人帳
+  timeline: 時間軸
+hitokoto:
+  loading: 次の文は…?
+global:
+  toggle_dark: ダークモード切り替え
+  toggle_langs: 言語切り替え

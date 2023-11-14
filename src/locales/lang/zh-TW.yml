@@ -1,0 +1,15 @@
+header:
+  name: 乃木流架
+  home: 首頁
+  articles: 文章
+  archives: 存檔
+  categories: 分類
+  tags: 標籤
+  about: 關於
+  friends: 友人帳
+  timeline: 時光軸
+hitokoto:
+  loading: 下句是...?
+global:
+  toggle_dark: 切換深色模式
+  toggle_langs: 切換語言
