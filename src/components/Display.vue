@@ -1,12 +1,12 @@
 <template>
     <div class="w-full  bg-[#f8f9fa] flex justify-center">
-        <div class=" w-4/6  bg-white my-4 mb-16 p-8 rounded  shadow-xl">
+        <div class=" w-4/6  bg-white my-16 mb-16 p-8 rounded  shadow-xl">
             <div class="composition-content font-oudie">
                 <p></p>
-                <div class="text-5xl tooltip-text"><a
-                        href="https://easylearn.baidu.com/edu-page/tiangong/composition?locSign=-7370188482985171745&query=%E6%95%A3%E6%96%87&sort=%E6%99%BA%E8%83%BD%E6%8E%92%E5%BA%8F&genre=16&index=2"
-                        target="_blank" class=" text-[#F596AA]">致我们终将逝去的青春</a>
-                    <div class="tooltip text-xl heti--classic" title="tooltip">百度随便搜的一篇散文 用做示例</div>
+                <div class="text-5xl ">
+                    <a href="https://easylearn.baidu.com/edu-page/tiangong/composition?locSign=-7370188482985171745&query=%E6%95%A3%E6%96%87&sort=%E6%99%BA%E8%83%BD%E6%8E%92%E5%BA%8F&genre=16&index=2"
+                        target="_blank" class=" text-[#F596AA]">致我们终将逝去的青春
+                    </a>
                 </div>
                 <div class="paragraph"></div>在这个喧闹的城市，<div class="paragraph"></div>我们背负了太多的包袱，<div class="paragraph"></div>
                 走过了很多路，<div class="paragraph"></div>吃过了很多苦。<div class="paragraph"></div>寂静夜空，对天仰望，<div class="paragraph">
