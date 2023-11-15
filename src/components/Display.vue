@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex justify-center bg-[#faebd7]">
+    <div class="w-full flex justify-center bg-[#FFF2E2]">
         <div class=" w-4/6  bg-white my-12 mb-12 p-8 rounded  shadow-xl">
             <div class="composition-content font-oudie">
                 <p></p>
@@ -47,5 +47,13 @@
         height: 1rem;
     }
 }
+// 银河白    #FFFFFF    RGB(255, 255, 255)
+// 杏仁黄    #FAF9DE    RGB(250, 249, 222)
+// 秋叶褐    #FFF2E2    RGB(255, 242, 226)
+// 胭脂红    #FDE6E0    RGB(253, 230, 224)
+// 青草绿    #E3EDCD    RGB(227, 237, 205)
+// 海天蓝    #DCE2F1    RGB(220, 226, 241)
+// 葛巾紫    #E9EBFE    RGB(233, 235, 254)
+// 极光灰    #EAEAEF    RGB(234, 234, 239)
 
 </style>
