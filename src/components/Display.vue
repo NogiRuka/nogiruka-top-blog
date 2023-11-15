@@ -1,6 +1,6 @@
 <template>
-    <div class="w-full  bg-[#f8f9fa] flex justify-center">
-        <div class=" w-4/6  bg-white my-16 mb-16 p-8 rounded  shadow-xl">
+    <div class="w-full flex justify-center bg-[#faebd7]">
+        <div class=" w-4/6  bg-white my-12 mb-12 p-8 rounded  shadow-xl">
             <div class="composition-content font-oudie">
                 <p></p>
                 <div class="text-5xl ">
@@ -48,24 +48,4 @@
     }
 }
 
-.tooltip-text {
-    position: relative;
-
-    .tooltip {
-        position: absolute;
-        z-index: 9999;
-        visibility: hidden;
-        top: -3rem;
-        left: 5.5rem;
-        background-color: antiquewhite;
-        padding: 0.25rem;
-    }
-
-    &:hover {
-        .tooltip {
-            transition: all 0.1s ease 0s;
-            visibility: visible;
-        }
-    }
-}
 </style>
