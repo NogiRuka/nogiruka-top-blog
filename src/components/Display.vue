@@ -1,52 +1,98 @@
 <template>
-    <div class="w-full flex justify-center bg-[#FFF2E2]">
-        <div class=" w-4/6  bg-white my-12 mb-12 p-8 rounded  shadow-xl">
-            <div class="composition-content font-oudie">
-                <p></p>
-                <div class="text-5xl ">
-                    <a href="https://easylearn.baidu.com/edu-page/tiangong/composition?locSign=-7370188482985171745&query=%E6%95%A3%E6%96%87&sort=%E6%99%BA%E8%83%BD%E6%8E%92%E5%BA%8F&genre=16&index=2"
-                        target="_blank" class=" text-[#F596AA]">致我们终将逝去的青春
-                    </a>
-                </div>
-                <div class="paragraph"></div>在这个喧闹的城市，<div class="paragraph"></div>我们背负了太多的包袱，<div class="paragraph"></div>
-                走过了很多路，<div class="paragraph"></div>吃过了很多苦。<div class="paragraph"></div>寂静夜空，对天仰望，<div class="paragraph">
-                </div>尘世间寻找心灵的安慰，<div class="paragraph"></div>我希望这些文字感动了你。<div class="paragraph"></div>——题记<div
-                    class="paragraph "></div>
-                我们经历了一场兵慌马乱的战争，没有硝烟，没有流血，却伤亡惨重。青春是美好的，带给了我们很多的快乐和激情，可是青春又是悲伤的，当有一天青春不在了，我们会拼命的去怀念，听到一首熟悉的老歌，我们会跟着旋律哼唱几句，看到一张发黄的旧照片，我们的心会百感交织，走在曾经熟悉的校园，会想起自己曾经的初恋，曾经被自己深爱的那个她，现在又过得怎样了，心中有太多太多的感触，同时也会问自己，我的青春去哪了?那年匆匆，还是匆匆那年。
-                <div class="paragraph"></div>
-                看一眼，满是繁华;忘一眼，人事全非，还记得我吻你的额头，那是十八岁的夜晚，你笑着说，我会是你这一生最爱的那个，可现在呢，空房间里飘荡着浓烈的酒精味，一个人的孤单，听着伤感的音乐，带上耳机，泪水无处可躲，我第一次尝到了泪水的味道，咸咸的，很苦涩，在你离开之后，我把你的东西全都扔掉了，唯一没有扔掉的是我们的回忆，虽然我的爱情满目疮痍，不忍直视，但是我不后悔曾经爱过你，我苦笑着释怀这一切，你已不会再回来。
-                <div class="paragraph"></div>
-                白落梅说：“真爱无悔，无论你我以何种方式来对待自己的情感。只要付出真心，拥有过珍惜过，就是最大的慈悲。相爱容易相守难，有一天发觉拥有的爱已不再是昨天的滋味，可以选择温柔地放手。因为相离不一定是背叛，给彼此一个美好的祝福，或许都会海阔天空。”
-                <div class="paragraph"></div>
-                学生时代里，因为不懂什么是利益交换，不懂什么是社会的黑暗，也不知道有一天我们会形同陌路。那时候我会很开心的过每一天，看一场搞笑的电影会笑半天，有心事会和自己身边的人说，遇到伤心事，第二天就当做是粉笔字擦掉，那时的日子每一天都是晴天，偶尔也会刮风打雷，但是那些只是插曲，不影我这首主题曲，在年少轻狂的日子里，我肆无忌惮的笑，朋友说我的笑容很好看，为了这句话我足足开心了一个星期，吃饭的时候也会感到很开心，而现在，再也找不回当初那个笑容明媚的少年，再也找不回曾经的难兄难弟，再多的言语也换不回曾经，回忆里的你们，已不在我身旁，我像个疯子一样对天长嚎，
-                为什么我们当初不懂得珍惜，现在我才知道我们的那段往事，唯美到任何一个作家都写不出来。<div class="paragraph"></div>汉霄苍茫，牵住繁华哀伤，弯眉间， 命中注定，成为过往。
-                秋风无情划着脸，夜里总是睁着眼睛到天亮，熟悉的场景里看到的竟是一张张陌生的脸孔，我们在年华里练习虚伪的笑容，早已忘记了我们还会哭泣，曲终人也会散，记忆一点点累积，最终可以串成一场散场电影了，岁月总是这般安静的流逝，我还学不会坚强，也不想那么快成长，但是没办法，时间会推着我一点一点走向成熟，回头看看，儿时的玩伴早已四处走散，虽说很难再聚了，但是每每想到他们，我们还是会暖暖一笑，不是麽。
-                一步一个脚印走来，自己内心总是有很多的感慨，感慨时间，感慨青春，最后我很感激在我人生道路上给过我鼓励的人们，即使是身边路人一个不知名的微笑。<div class="paragraph"></div>
-                谁知道所有的事情都在半路改变了方向，无数次的离开和相聚之后，年少轻狂变成蝴蝶般飞走，最终绝望地停留在永远无法过境的沧海。——饶雪漫<p></p>
-                <p></p>
-            </div>
+  <div class="w-full flex justify-center bg-[#FFF2E2]">
+    <div class="w-4/6 bg-white my-12 mb-12 p-8 rounded shadow-xl">
+      <div class="composition-content font-oudie">
+        <p></p>
+        <div class="text-4xl">
+          <a
+            href="https://www.bilibili.com/video/BV14H4y1z77H"
+            target="_blank"
+            class="text-[#d89c1f]"
+            >执子花 (zhí zǐ huā) (Original Soundtrack 'I Feel You Linger in the Air’)
+          </a>
         </div>
+        <div class="rnp-lyrics-overview">
+          <div class="rnp-lyrics-overview-line passed interlude"></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">古老树下花瓣 今人嗅远</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">心上人 随香聚散 时过境迁</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">苦涩晚风 柔情梦半 香甜作伴</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">未曾了结却</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">紧张了心弦</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">难道说 相爱之人 终会承受路相远</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">上天说 同船共渡 还要看造化预言</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">身有几许 姻缘线</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">尚有几分 情能圆</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">执子花开缱绻 窈窈暖暖</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">残香留指尖 或永远</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">道别那年花开 如今花谢</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">冰雨白瓣 泛黄重现 又何天</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">那日如蝶翩翩 如今哪有身来验</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">花落多少才能 换得一把爱成全</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">莫让素时尘世 木鱼点点敲变天</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">能否留步我视线</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">请君相守一万年</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">执子手 立下的誓言</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">海角天边 人间未变</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">手握子衿 香囊暗解 黄昏燕</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">孤单不枉 迎风傲然 香一段</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">执子花的爱 不肤浅</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">一心念 唯一人愿</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">花落年年 换得香忆 爱漫天</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">入梦来时是婉娩 待听乡还</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">莫让素时尘世 木鱼点点敲变天</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">能否留步我视线</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">执子手 立下的誓言</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">海角天边 人间未变</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">手握子衿 香囊暗解 黄昏燕</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">孤单不枉 迎风傲然 香一段</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">执子花的爱 不肤浅</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">一心念 唯一人愿</div></div>
+          <div class="rnp-lyrics-overview-line passed"><div class="rnp-lyrics-overview-line-original">花落年年 换得香忆 爱漫天</div></div>
+          <div class="rnp-lyrics-overview-line current"><div class="rnp-lyrics-overview-line-original">入梦来时是婉娩 待听乡还</div></div>
+          <div class="rnp-lyrics-overview-line"><div class="rnp-lyrics-overview-line-original">执子花开缱绻 窈窈暖暖</div></div>
+          <div class="rnp-lyrics-overview-line"><div class="rnp-lyrics-overview-line-original">残香留指尖 或永远</div></div>
+        </div>
+        <p></p>
+      </div>
     </div>
+  </div>
 </template>
-    
-<script setup lang='ts'>
 
-</script>
-    
+<script setup lang="ts"></script>
+
 <style lang="scss" scoped>
 .composition-content {
-    font-size: 1.5rem;
-    color: #222;
-    line-height: 3rem;
+  font-size: 1.5rem;
+  color: #6e854c;
+  line-height: 3rem;
 
-    p {
-        margin-bottom: 1rem;
-    }
+  p {
+    margin-bottom: 1rem;
+  }
 
-    .paragraph {
-        height: 1rem;
-    }
+  .paragraph {
+    height: 1rem;
+  }
 }
+
+.rnp-lyrics-overview {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 1.25;
+}
+.rnp-lyrics-overview .rnp-lyrics-overview-line {
+    margin-bottom: 10px;
+    opacity: 1;
+}
+
+
+
+
+
+
+
 // 银河白    #FFFFFF    RGB(255, 255, 255)
 // 杏仁黄    #FAF9DE    RGB(250, 249, 222)
 // 秋叶褐    #FFF2E2    RGB(255, 242, 226)
@@ -55,5 +101,4 @@
 // 海天蓝    #DCE2F1    RGB(220, 226, 241)
 // 葛巾紫    #E9EBFE    RGB(233, 235, 254)
 // 极光灰    #EAEAEF    RGB(234, 234, 239)
-
 </style>
