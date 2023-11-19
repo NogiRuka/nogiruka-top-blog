@@ -1,7 +1,7 @@
 import confetti from 'canvas-confetti'
 
 export function initConfetti(event: MouseEvent) {
-    console.log(event.clientX, event.clientY);
+    // console.log(event.clientX, event.clientY);
     confetti({
         startVelocity: 10,
         particleCount: 50,

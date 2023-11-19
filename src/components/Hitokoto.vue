@@ -1,7 +1,6 @@
 <template>
         <div id="hitokoto" class=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-sm">
-          <div class="bg-transparent  rounded-lg text-xl justify-center px-6 w-180 h-60 flex flex-col justify-items-stretch heti font-qingke
-            ">
+          <div class="bg-transparent  rounded-lg text-xl justify-center px-6 w-180 h-60 flex flex-col justify-items-stretch heti font-qingke">
               <div class="pt-5 !text-3xl ">
                   <a href="#" target="_blank" id="hitokoto_text">
                       {{ $t('hitokoto.loading') }}
