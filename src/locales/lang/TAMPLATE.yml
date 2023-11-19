@@ -10,3 +10,6 @@ header:
   timeline: ''
 hitokoto:
   loading: ''
+global:
+  toggle_dark: ''
+  toggle_langs: ''

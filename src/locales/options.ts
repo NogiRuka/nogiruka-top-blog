@@ -12,6 +12,10 @@ const options = [
     key: 'ja',
   },
   {
+    label: 'ภาษาไทย',
+    key: 'th',
+  },
+  {
     label: 'English',
     key: 'en',
   },

@@ -1,0 +1,15 @@
+header:
+  name: โนกิ รูกะ
+  home: หน้าแรก
+  articles: บทความ
+  archives: คลังเก็บเอกสารสำคัญ
+  categories: การจัดหมวดหมู่
+  tags: ฉลาก
+  about: เกี่ยวกับ
+  friends: หนังสือแห่งเพื่อน
+  timeline: แกนเวลา
+hitokoto:
+  loading: ประโยคต่อไปคือ...?
+global:
+  toggle_dark: สลับโหมดมืด
+  toggle_langs: เปลี่ยนภาษา
