@@ -6,7 +6,9 @@
                         class="fa fa-spinner fa-spin"></i></span> 次</span>
             <span id="busuanzi_container_site_uv">，访客数：<span id="busuanzi_value_site_uv"><i
                         class="fa fa-spinner fa-spin"></i></span> 人</span>
+            <div class="flex justify-center items-center"><a href="https://github.com/NogiRuka/nogiruka-top-blog" target="_blank" class="text-black"><i i-carbon-logo-github />Github</a></div>
         </div>
+
     </footer>
 </template>
     
