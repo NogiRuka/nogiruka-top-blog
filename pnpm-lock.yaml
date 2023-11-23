@@ -26,6 +26,9 @@ dependencies:
   vue-i18n:
     specifier: ^9.5.0
     version: 9.5.0(vue@3.3.4)
+  vue-notion:
+    specifier: 3.0.0-beta.1
+    version: 3.0.0-beta.1(@janniks/vue3-katex@0.6.0-rc.5.1)(vue@3.3.4)
   vue-router:
     specifier: '4'
     version: 4.2.5(vue@3.3.4)
@@ -581,6 +584,17 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
+    dev: false
+
+  /@janniks/vue3-katex@0.6.0-rc.5.1(katex@0.16.9)(vue@3.3.4):
+    resolution: {integrity: sha512-3VEvVQ5a/1DK2bo4JJJA2uk6Q+oygpVPwnx/wnVgA8AYH49vZzFI/1YNZQUCEssfXjB7Hk3epAoT4oIYGjGfNw==}
+    peerDependencies:
+      katex: 0.x
+      vue: 3.x
+    dependencies:
+      deepmerge: 4.3.1
+      katex: 0.16.9
+      vue: 3.3.4
     dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
@@ -1488,6 +1502,11 @@ packages:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
     dev: true
 
+  /commander@8.3.0:
+    resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
+    engines: {node: '>= 12'}
+    dev: false
+
   /comment-parser@1.4.0:
     resolution: {integrity: sha512-QLyTNiZ2KDOibvFPlZ6ZngVsZ/0gYnE6uTXi5aoDg8ed3AkJAz4sEje3Y8a29hQ1s6A99MZXe47fLAXQ1rTqaw==}
     engines: {node: '>= 12.0.0'}
@@ -1584,9 +1603,13 @@ packages:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
     dev: true
 
+  /deepmerge@4.3.1:
+    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
+    engines: {node: '>=0.10.0'}
+    dev: false
+
   /defu@6.1.2:
     resolution: {integrity: sha512-+uO4+qr7msjNNWKYPHqN/3+Dx3NFkmIzayk2L1MyZQlvgZb/J1A0fo410dpKrN2SnqFjt8n4JL8fDJE0wIgjFQ==}
-    dev: true
 
   /delayed-stream@1.0.0:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
@@ -2464,6 +2487,13 @@ packages:
 
   /jsonc-parser@3.2.0:
     resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==}
+
+  /katex@0.16.9:
+    resolution: {integrity: sha512-fsSYjWS0EEOwvy81j3vRA8TEAhQhKiqO+FQaKWp0m39qwOzHVBgAUBIXWj1pB+O2W3fIpNa6Y9KSKCVbfPhyAQ==}
+    hasBin: true
+    dependencies:
+      commander: 8.3.0
+    dev: false
 
   /keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
@@ -3402,6 +3432,17 @@ packages:
       '@intlify/core-base': 9.5.0
       '@intlify/shared': 9.5.0
       '@vue/devtools-api': 6.5.1
+      vue: 3.3.4
+    dev: false
+
+  /vue-notion@3.0.0-beta.1(@janniks/vue3-katex@0.6.0-rc.5.1)(vue@3.3.4):
+    resolution: {integrity: sha512-s6NeDlcVs6dtC4g/3dFRrvZMeYR7gcLAjmjYQOETQmxJbviGRGSwBNPZZnN4aXPIQiss/4hv3S23IMi4XP3MLw==}
+    peerDependencies:
+      '@janniks/vue3-katex': ^0.6.0-rc.5.1
+      vue: ^3.2.45
+    dependencies:
+      '@janniks/vue3-katex': 0.6.0-rc.5.1(katex@0.16.9)(vue@3.3.4)
+      defu: 6.1.2
       vue: 3.3.4
     dev: false
 

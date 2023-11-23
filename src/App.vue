@@ -1,11 +1,13 @@
 <template>
+    <Suspense>
     <router-view />
+    </Suspense>
 </template>
   
-<script lang='ts' setup>
-  
+<script setup lang='ts'>
+
 </script>
   
-<style lang='scss' scoped>
+<style scoped lang='scss'>
   
 </style>

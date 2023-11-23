@@ -14,6 +14,17 @@ import Hitokoto from '@/components/Hitokoto.vue';
 //todo 响应式布局
 
 
+// import retrieveADatabase from '@/api/notion/retrieveADatabase';
+
+// retrieveADatabase()
+
+fetch('/api')
+   .then((res) => res.json())
+   .then((data) => {
+        console.log(data);
+    });
+
+
 
 </script>
     

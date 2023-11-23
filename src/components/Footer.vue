@@ -8,7 +8,6 @@
                         class="fa fa-spinner fa-spin"></i></span> 人</span>
             <div class="flex justify-center items-center"><a href="https://github.com/NogiRuka/nogiruka-top-blog" target="_blank" class="text-black"><i i-carbon-logo-github />Github</a></div>
         </div>
-
     </footer>
 </template>
     
