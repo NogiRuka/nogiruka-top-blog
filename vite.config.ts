@@ -20,6 +20,7 @@ export default defineConfig({
     alias: {
       //文件系统路径的别名, 绝对路径
       '@': resolve(__dirname, 'src'),
+      '#': resolve(__dirname, 'types'),
       '/imgs': './src/assets/imgs',
     },
     // 使用路径别名时想要省略的后缀名

@@ -7,11 +7,10 @@
     
 <script setup lang='ts'>
 import Header from "@/components/Header.vue";
-import { NotionRenderer, getPageBlocks } from "vue-notion";
+import { NotionRenderer, getPageBlocks, getPageTable } from "vue-notion";
 
-let blockMap:any = await getPageBlocks('8c1ab01960b049f6a282dda64a94afc7');
-
-// blockMap = await getPageBlocks('8c1ab01960b049f6a282dda64a94afc7');
+let blockMap:any = await getPageBlocks(import.meta.env.VITE_NOTION_PAGE_ID, 'https://notion-api.1693145038.workers.dev/v1');
+// let blockMap:any = await getPageTable(import.meta.env.VITE_NOTION_DATABASE_ID, 'https://notion-api.1693145038.workers.dev/v1');
 
 console.log(`output->blockMap`, blockMap)
 

@@ -46,12 +46,10 @@
           <div class="mx-1 flex">
             <router-link to="/timeline"> <i i-carbon:document-sentiment />{{ $t('header.timeline') }} </router-link>
           </div>
-          <div class="mx-1 flex">
-            <a href="">
-            <n-dropdown trigger="hover" :options="options" :on-select="toggleLocales">
+          <div class="mx-1 flex text-white p-3px items-center">
+            <n-dropdown trigger="hover" :options="options" :on-select="toggleLocale">
                 <i i-carbon-earth-filled :title="$t('global.toggle_langs')" />
             </n-dropdown>
-            </a>
           </div>
 
         </div>
@@ -67,9 +65,12 @@ import options from '@/locales/options'
 
 const { locale } = useI18n()
 
-function toggleLocales(key: string) {
-  // console.log(key);
-  locale.value = key
+async function toggleLocale(lang: string) {
+  if (typeof document !== 'undefined')
+    document.querySelector('html')?.setAttribute('lang', lang)
+
+  localStorage.setItem('locale', lang)
+  locale.value = lang
 }
 
 //todo 背景图片切换 图片来源显示
