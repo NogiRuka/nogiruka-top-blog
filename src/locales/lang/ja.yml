@@ -10,6 +10,21 @@ header:
   timeline: 時間軸
 hitokoto:
   loading: 次の文は…?
+button:
+  toggle_dark: ダークモードを切り替える
+  toggle_langs: 言語を切り替える
 global:
-  toggle_dark: ダークモード切り替え
-  toggle_langs: 言語切り替え
+  not-found: ページが見つかりません
+  back: 戻る
+  prev: 前のページ
+  next: 次のページ
+  comments: コメント
+  toc: 目次
+  share: 共有
+  donate: 寄付する
+  search: 検索
+  search_placeholder: 検索
+  search_button: 検索
+  search_result: の検索結果
+  search_no_result: 関連する結果が見つかりませんでした
+  search_no_more: 終わりだ

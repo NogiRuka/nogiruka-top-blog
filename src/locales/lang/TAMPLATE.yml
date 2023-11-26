@@ -10,6 +10,21 @@ header:
   timeline: ''
 hitokoto:
   loading: ''
-global:
+button:
   toggle_dark: ''
   toggle_langs: ''
+global:
+  not-found: ''
+  back: ''
+  prev: ''
+  next: ''
+  comments: ''
+  toc: ''
+  share: ''
+  donate: ''
+  search: ''
+  search_placeholder: ''
+  search_button: ''
+  search_result: ''
+  search_no_result: ''
+  search_no_more: ''

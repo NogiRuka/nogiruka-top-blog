@@ -1,13 +1,19 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
-import vue from '@vitejs/plugin-vue'
+import Vue from '@vitejs/plugin-vue'
+import VueRouter from 'unplugin-vue-router/vite'
 import UnoCSS from 'unocss/vite'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    VueRouter({
+      dataFetching: true,
+      extensions: ['.vue', '.md'],
+      dts: './typed-router.d.ts',
+    }),
+    Vue(),
     UnoCSS(),
     VueI18nPlugin({
       runtimeOnly: true,

@@ -10,6 +10,21 @@ header:
   timeline: แกนเวลา
 hitokoto:
   loading: ประโยคต่อไปคือ...?
-global:
+button:
   toggle_dark: สลับโหมดมืด
   toggle_langs: เปลี่ยนภาษา
+global:
+  not-found: ไม่พบหน้านี้
+  back: กลับ
+  prev: หน้าก่อน
+  next: หน้าต่อไป
+  comments: ความคิดเห็น
+  toc: สารบัญ
+  share: แบ่งปัน
+  donate: บริจาค
+  search: ค้นหา
+  search_placeholder: ค้นหา
+  search_button: ค้นหา
+  search_result: ผลการค้นหา
+  search_no_result: ไม่พบผลลัพธ์ที่เกี่ยวข้อง
+  search_no_more: มันเป็นจุดสิ้นสุด
