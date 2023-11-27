@@ -48,7 +48,7 @@
           </div>
           <div class="mx-1 flex text-white p-3px items-center">
             <n-dropdown trigger="hover" :options="options" :on-select="toggleLocale">
-                <i i-carbon-earth-filled :title="$t('global.toggle_langs')" />
+                <i i-carbon-earth-filled :title="$t('button.toggle_langs')" />
             </n-dropdown>
           </div>
 
@@ -79,8 +79,6 @@ async function toggleLocale(lang: string) {
 <style lang="scss" scoped>
 a {
   border: 1px dashed transparent;
-  /* color: white; */
-  /* background-color: aquamarine; */
 }
 
 a:hover {

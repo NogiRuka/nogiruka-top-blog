@@ -1,6 +1,5 @@
 <template>
     <h1>index.vue</h1>
-    <router-view />
 </template>
   
 <script setup lang='ts'>
@@ -10,3 +9,8 @@
 <style scoped lang='scss'>
   
 </style>
+
+<route lang="yaml">
+meta:
+  layout: default
+</route>

@@ -1,18 +1,18 @@
 <template>
-  <main
-    px-4 py-10
-    text="center gray-700 dark:gray-200"
-  >
+  <Header />
+  <main>
     <RouterView />
     
     <div mx-auto mt-5 text-center text-sm opacity-50>
       [Default Layout]
     </div>
-    <Footer />
+    
   </main>
+  <Footer />
 </template>
   
 <script setup lang='ts'>
+import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 </script>
   

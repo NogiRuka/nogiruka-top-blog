@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import Vue from '@vitejs/plugin-vue'
 import VueRouter from 'unplugin-vue-router/vite'
+import Layouts from 'vite-plugin-vue-layouts'
 import UnoCSS from 'unocss/vite'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 
@@ -13,6 +14,7 @@ export default defineConfig({
       extensions: ['.vue', '.md'],
       dts: './typed-router.d.ts',
     }),
+    Layouts(),
     Vue(),
     UnoCSS(),
     VueI18nPlugin({
