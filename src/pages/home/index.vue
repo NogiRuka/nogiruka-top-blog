@@ -1,31 +1,22 @@
-<template>
-    <Hitokoto />
-    <Display />
-</template>
-    
 <script setup lang='ts'>
 import Display from '@/components/Display.vue'
-import Hitokoto from '@/components/Hitokoto.vue';
+import Hitokoto from '@/components/Hitokoto.vue'
 
-//todo 响应式布局
-
-
-// import retrieveADatabase from '@/api/notion/retrieveADatabase';
-
-// retrieveADatabase()
+// todo 响应式布局
 
 fetch('/api')
-   .then((res) => res.json())
-   .then((data) => {
-        console.log(data);
-    });
-
-
-
+  .then(res => res.json())
+  .then((data) => {
+    console.log(data)
+  })
 </script>
-    
-<style lang="scss" scoped>
 
+<template>
+  <Hitokoto />
+  <Display />
+</template>
+
+<style lang="scss" scoped>
 a,
 p {
     color: white;
@@ -36,3 +27,7 @@ p {
     transform: translate(-50%, -50%);
 }
 </style>
+
+<route lang="yaml">
+name: home
+</route>

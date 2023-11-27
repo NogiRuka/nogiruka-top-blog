@@ -1,9 +1,10 @@
 /// <reference types="vite/client" />
 
 declare module '*.vue' {
-    import type { DefineComponent } from 'vue'
-    const component: DefineComponent<{}, {}, any>
-    export default component
+  import type { DefineComponent } from 'vue'
+
+  const component: DefineComponent<object, object, any>
+  export default component
 }
 
 declare module 'vue-notion'
@@ -11,11 +12,8 @@ declare module 'vue-notion'
 // manual extension of route types
 declare module 'vue-router/auto/routes' {
   import type {
-    RouteRecordInfo,
     ParamValue,
-    ParamValueOneOrMore,
-    ParamValueZeroOrMore,
-    ParamValueZeroOrOne,
+    RouteRecordInfo,
   } from 'unplugin-vue-router'
 
   export interface RouteNamedMap {

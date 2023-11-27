@@ -1,8 +1,8 @@
 {
   "name": "nogiruka-top-blog",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
@@ -23,13 +23,13 @@
     "vue-router": "4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^1.1.0",
+    "@antfu/eslint-config": "^2.1.1",
     "@iconify/json": "^2.2.130",
     "@iconify/utils": "^2.1.11",
     "@types/canvas-confetti": "^1.6.2",
     "@types/node": "^20.8.7",
     "@vitejs/plugin-vue": "^4.2.3",
-    "eslint": "^8.53.0",
+    "eslint": "^8.54.0",
     "naive-ui": "^2.35.0",
     "sass": "^1.69.5",
     "terser": "^5.24.0",

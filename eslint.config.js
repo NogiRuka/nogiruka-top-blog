@@ -1,21 +1,21 @@
 // eslint.config.js
-const antfu = require('@antfu/eslint-config').default
-const { FlatCompat } = require('@eslint/eslintrc')
+import antfu from '@antfu/eslint-config'
 
-const compat = new FlatCompat()
-
-module.exports = antfu(
+export default await antfu(
   {
-    ignores: [],
+    stylistic: {
+      indent: 2, // 4, or 'tab'
+      quotes: 'single', // or 'double'
+    },
+    rules: {
+      'no-console': 'off',
+      'no-restricted-syntax': [
+        'error',
+        {
+          selector: 'CallExpression[callee.object.name=\'console\'][callee.property.name!=/^(log|warn|error|info|trace)$/]',
+          message: 'Unexpected property on console object was called',
+        },
+      ],
+    },
   },
-
-  // Legacy config
-  ...compat.config({
-    extends: [
-      'eslint:recommended',
-      // Other extends...
-    ],
-  })
-
-  // Other flat configs...
 )

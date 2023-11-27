@@ -1,5 +1,5 @@
+import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
-import { resolve } from 'path'
 import Vue from '@vitejs/plugin-vue'
 import VueRouter from 'unplugin-vue-router/vite'
 import Layouts from 'vite-plugin-vue-layouts'
@@ -26,7 +26,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      //文件系统路径的别名, 绝对路径
+      // 文件系统路径的别名, 绝对路径
       '@': resolve(__dirname, 'src'),
       '#': resolve(__dirname, 'types'),
       '/imgs': './src/assets/imgs',
@@ -35,11 +35,11 @@ export default defineConfig({
     extensions: ['.js', '.json', '.ts', '.vue'],
   },
 
-  base: './', //打包的路径
+  base: './', // 打包的路径
   server: {
-    port: 4000, //服务端口号
-    open: true, //服务启动时自动打开浏览器
-    cors: true, //允许跨域
+    port: 4000, // 服务端口号
+    open: true, // 服务启动时自动打开浏览器
+    cors: true, // 允许跨域
     // proxy: {
     //   '/api': {
     //     target: 'https://api.notion.com', //目标源，目标服务器，真实请求地址

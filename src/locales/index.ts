@@ -16,7 +16,3 @@ const localesMap = Object.fromEntries(
 const availableLocales = Object.keys(localesMap)
 
 console.log(`output->availableLocales`, availableLocales)
-
-
-
-

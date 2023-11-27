@@ -3,11 +3,8 @@
 // manual extension of route types
 declare module 'vue-router/auto/routes' {
   import type {
-    RouteRecordInfo,
     ParamValue,
-    ParamValueOneOrMore,
-    ParamValueZeroOrMore,
-    ParamValueZeroOrOne,
+    RouteRecordInfo,
   } from 'unplugin-vue-router'
 
   export interface RouteNamedMap {
