@@ -1,15 +1,13 @@
 <script setup lang='ts'>
-
+import Display from '@/components/Display.vue'
+import Hitokoto from '@/components/Hitokoto.vue'
 </script>
 
 <template>
-  <div>index.vue</div>
+  <Hitokoto />
+  <Display />
 </template>
 
 <style scoped lang='scss'>
 
 </style>
-
-<route lang="yaml">
-path: /
-</route>

@@ -20,3 +20,7 @@ console.log(`output->tableMap`, tableMap)
 /* optional Notion-like styles */
 @import "vue-notion/src/styles.css";
 </style>
+
+<route lang='yaml'>
+name: timeline
+</route>

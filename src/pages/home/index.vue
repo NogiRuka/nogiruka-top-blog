@@ -29,5 +29,4 @@ p {
 </style>
 
 <route lang="yaml">
-name: home
 </route>

@@ -1,4 +1,7 @@
-@use './reset.scss';
-@use './public.scss';
+@use './normalize.css';
 
-@use './font.scss';
+@use './base.scss';
+
+@use './common/font.scss';
+
+@use './common/scrollbar.scss';

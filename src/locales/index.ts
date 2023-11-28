@@ -8,11 +8,10 @@ export const i18n = createI18n({
   messages,
 })
 
-const localesMap = Object.fromEntries(
-  Object.entries(import.meta.glob('./lang/*.yml'))
-    .map(([path, loadLocale]) => [path.match(/([\w-]*)\.yml$/)?.[1], loadLocale]),
-) as Record<Locale, () => Promise<{ default: Record<string, string> }>>
+// const localesMap = Object.fromEntries(
+//   Object.entries(import.meta.glob('./lang/*.yml'))
+//     .map(([path, loadLocale]) => [path.match(/([\w-]*)\.yml$/)?.[1], loadLocale]),
+// ) as Record<Locale, () => Promise<{ default: Record<string, string> }>>
 
-const availableLocales = Object.keys(localesMap)
-
-console.log(`output->availableLocales`, availableLocales)
+// const availableLocales = Object.keys(localesMap)
+// console.log(`output->availableLocales`, availableLocales)
