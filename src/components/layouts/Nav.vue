@@ -1,86 +1,155 @@
-<script setup lang='ts'>
-import { ref } from 'vue'
-import { NDropdown } from 'naive-ui'
+<script setup lang="ts">
+import { onMounted, onBeforeUnmount, ref, watch, h } from 'vue'
+import { NDropdown, NIcon } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
-import { useScroll } from '@vueuse/core'
 import options from '@/locales/options'
 
-const el = ref<HTMLElement | null>(null)
-const { y } = useScroll(el)
-
-console.log(`output->y`, y)
+const renderIcon = (icon: string) => {
+  return () => {
+    return h('div', { class: icon })
+  }
+}
 
 const { locale } = useI18n()
+const navMenu = [
+  {
+    title: 'header.home',
+    url: '/',
+    icon: 'i-carbon-home',
+    sub: [
+      {
+        label: '简体',
+        icon: renderIcon('i-carbon-earth-filled'),
+      },
+      {
+        label: '繁體',
+        icon: renderIcon('i-carbon-earth-filled'),
+      },
+      {
+        label: '日本語',
+        icon: renderIcon('i-carbon-earth-filled'),
+      },
+    ]
+  },
+  {
+    title: 'header.archives',
+    url: '/archives',
+    icon: 'i-iconoir-page',
+  },
+  {
+    title: 'header.categories',
+    url: '/categories',
+    icon: 'i-carbon-data-vis-1',
+  },
+  {
+    title: 'header.tags',
+    url: '/tags',
+    icon: 'i-carbon:tag-group',
+  },
+  {
+    title: 'header.about',
+    url: '/about',
+    icon: 'i-tabler:mood-heart',
+  },
+  {
+    title: 'header.friends',
+    url: '/friends',
+    icon: 'i-solar-link-round-angle-linear',
+  },
+  {
+    title: 'header.timeline',
+    url: '/timeline',
+    icon: 'i-carbon:document-sentiment',
+  },
+]
 
+console.log(`output->navMenu`, navMenu)
+
+// 滚动事件
+const scrollY = ref(window.scrollY)
+const navHide = ref(false)
+const textWhite = ref(true)
+const scroll = () => {
+  scrollY.value = window.scrollY
+}
+watch(scrollY, (newValue, oldValue) => {
+  console.log('ScrollY changed:', newValue)
+  if (newValue > oldValue) {
+    navHide.value = true
+  } else {
+    navHide.value = false
+  }
+  
+  if (newValue > 100) {
+    textWhite.value = false
+  } else {
+    textWhite.value = true
+  }
+})
+
+onMounted(() => {
+  window.addEventListener('scroll', scroll)
+})
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', scroll)
+})
+
+// 国际化
 async function toggleLocale(lang: string) {
-  if (typeof document !== 'undefined')
+  if (typeof document !== 'undefined') {
     document.querySelector('html')?.setAttribute('lang', lang)
-
+  }
   localStorage.setItem('locale', lang)
   locale.value = lang
 }
+
+
 </script>
 
-<template ref="el">
-  <nav fixed w-full top-0 z-999>
-    <div class="bg-transparent backdrop-blur-xl p-4 flex justify-between  shadow-xl text-4">
+<template>
+  <nav  fixed w-full top-0 z-999 transition ease-in-out duration-300 :class="[{ 'nav-hide': navHide, 'text-white': textWhite }, '-translate-y-0']">
+    <div class="bg-transparent backdrop-blur-xl shadow-xl h-12 flex justify-between text-4">
       <!-- LEFT -->
-      <RouterLink to="/">
-        <div class="flex">
-          <div i-icon:nogiruka />
-          <span class="logo">{{ $t('header.name') }}
-            <span class="big-logo">
-              <div i-icon:nogiruka class="w-150 h-150" />
-            </span>
-          </span>
-        </div>
-      </RouterLink>
-      <!-- RIGHT -->
-      <div class="justify-end flex z-20">
-        <RouterLink to="/home">
-          <div class="mx-1 flex">
-            <div i-carbon-home />{{ $t('header.home') }}
-          </div>
+      <div class="nav-left flex">
+        <RouterLink to="/">
+          <span i-icon:nogiruka class="mr-2px" />
+          <span class="sm:block hidden">{{ $t('header.name') }}</span>
         </RouterLink>
-        <div class="mx-1 flex hov">
-          <RouterLink to="/home">
-            <div i-iconoir-page />{{ $t('header.articles') }}
+        <span class="big-logo">
+          <div i-icon:nogiruka class="w-150 h-150" />
+        </span>
+      </div>
+      <!-- RIGHT -->
+      <div class="nav-right md:flex hidden">
+        <!-- <div class="mx-1 flex text-white p-3px items-center">
+          <NDropdown trigger="hover" :options="undefined" >
+            <div>
+            <div i-carbon-earth-filled />首页
+            </div>
+          </NDropdown>
+        </div> -->
+        <!-- <RouterLink :to="item.url" v-for="(item, index) in navMenu" :key="index">
+          <span :[item.icon]="''" class="mr-2px" />
+          {{$t(item.title)}}
+           <ul class="drop absolute list-none w-full top-10 bg-black mt-2">
+              <li>scss</li>
+              <li>jquery</li>
+              <li>html</li>
+          </ul>  
+        </RouterLink> -->
+        
+        <NDropdown trigger="hover" :options="item.sub" v-for="(item, index) in navMenu" :key="index">
+          <RouterLink :to="item.url" v-if="item.sub === undefined">
+            <span :[item.icon]="''" class="mr-2px" />
+            {{$t(item.title)}}
           </RouterLink>
-          <ul class="top-8 list-none absolute bg-white hidden subhov">
-            <li>
-              <RouterLink to="/archives">
-                <div i-octicon-archive-24 />{{ $t('header.archives') }}
-              </RouterLink>
-            </li>
-            <li>
-              <RouterLink to="/categories">
-                <div i-carbon-data-vis-1 />{{ $t('header.categories') }}
-              </RouterLink>
-            </li>
-            <li>
-              <RouterLink to="/tags">
-                <div i-carbon:tag-group />{{ $t('header.tags') }}
-              </RouterLink>
-            </li>
-          </ul>
-        </div>
-        <div class="mx-1 flex">
-          <!-- <RouterLink to="/about">
-                        <div i-tabler:mood-heart />{{ $t('header.about') }}
-                    </RouterLink> -->
-          <a href="https://github.com/NogiRuka" target="_blank">
-            <div i-tabler:mood-heart />{{ $t('header.about') }} </a>
-        </div>
-        <div class="mx-1 flex">
-          <RouterLink to="/friends">
-            <div i-solar-link-round-angle-linear />{{ $t('header.friends') }}
-          </RouterLink>
-        </div>
-        <div class="mx-1 flex">
-          <RouterLink to="/timeline">
-            <div i-carbon:document-sentiment />{{ $t('header.timeline') }}
-          </RouterLink>
-        </div>
+          <!-- DROPDOWN -->
+          <a v-else class="select-none">
+            <span :[item.icon]="''" class="mr-2px" />
+            {{$t(item.title)}}
+          </a>
+        </NDropdown>
+        
         <div class="mx-1 flex text-white p-3px items-center">
           <NDropdown trigger="hover" :options="options" :on-select="toggleLocale">
             <div i-carbon-earth-filled :title="$t('button.toggle_langs')" />
@@ -91,37 +160,45 @@ async function toggleLocale(lang: string) {
   </nav>
 </template>
 
-<style scoped lang='scss'>
-i {
-  padding-right: .2rem;
-}
-
-a {
-  color: white;
-}
-
-.logo {
-  position: relative;
-  display: inline-block;
-}
-
+<style scoped lang="scss">
 .big-logo {
-  position: absolute;
-  top: 66px;
-  left: -88px;
+  position: fixed;
+  top: 5rem;
+  left: 0;
   z-index: 50;
+  // background-color: bisque;
   display: none;
 }
 
-.logo:hover .big-logo {
-  display: block;
+
+.nav-hide {
+  transform: translateY(-100%);
 }
 
-.hov:hover .subhov {
-  display: block;
+.nav-left {
+  a {
+    display: flex;
+    align-items: center;
+  }
+  
+  &:hover {
+    .big-logo {
+      display: block;
+    }
+  }
 }
 
-.subhov a {
-  color: black;
+.nav-right {
+  a {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-left: 0.5rem;
+    
+    &:hover {
+     background-color: aqua;
+    }
+
+  }
 }
 </style>

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="w-full flex justify-center bg-[#FFF2E2]">
+  <div class="w-full flex justify-center bg-[#f6f7f9]">
     <div class="w-4/6 bg-white my-12 mb-12 p-8 rounded shadow-xl">
       <div class="composition-content font-oudie">
         <p />

@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-
 }
 
 html,
@@ -16,5 +15,13 @@ body {
 a {
     color: inherit;
     text-decoration: none;
-    border: solid 1px white;
+    // border: solid 1px white;
+    margin: 0 .1rem;
+}
+
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }

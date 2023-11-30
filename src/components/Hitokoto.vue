@@ -35,14 +35,14 @@ fetch('https://v1.hitokoto.cn?c=d&c=i&c=k')
 
 <template>
   <div id="hitokoto" class=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-sm">
-    <div class="bg-transparent  rounded-lg text-xl justify-center px-6 w-180 h-60 flex flex-col justify-items-stretch heti font-qingke">
+    <div class="bg-transparent  rounded-lg text-xl justify-center px-6 w-180 h-60 flex flex-col justify-items-stretch heti font-qingke text-white">
       <div class="pt-5 !text-3xl ">
         <a id="hitokoto_text" href="#" target="_blank">
           {{ $t('hitokoto.loading') }}
         </a>
       </div>
       <div class="flex flex-nowrap justify-end text-right mt-4 text-2xl">
-        <p class="text-white">
+        <p class="">
           ——
           <span id="from_who" />
           「

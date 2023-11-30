@@ -8,6 +8,7 @@ export default await antfu(
       quotes: 'single', // or 'double'
     },
     rules: {
+      'curly': 'consistent',
       'no-console': 'off',
       'no-restricted-syntax': [
         'error',

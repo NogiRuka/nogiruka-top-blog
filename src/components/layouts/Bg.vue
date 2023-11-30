@@ -3,9 +3,7 @@
 </script>
 
 <template>
-  <div class="w-full h-screen bg-cover" style="background-image: url('/bg-6.webp')">
-    Bg.vue
-  </div>
+  <div class="w-full h-screen bg-cover" style="background-image: url('/bg-6.webp')" />
 </template>
 
 <style scoped lang='scss'>
