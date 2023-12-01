@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, ref, watch, h } from 'vue'
-import { NDropdown, NIcon } from 'naive-ui'
+import { NDropdown } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import options from '@/locales/options'
 
@@ -29,7 +29,7 @@ const navMenu = [
         label: '日本語',
         icon: renderIcon('i-carbon-earth-filled'),
       },
-    ]
+    ],
   },
   {
     title: 'header.archives',
@@ -73,13 +73,13 @@ const scroll = () => {
   scrollY.value = window.scrollY
 }
 watch(scrollY, (newValue, oldValue) => {
-  console.log('ScrollY changed:', newValue)
+  // console.log('ScrollY changed:', newValue)
   if (newValue > oldValue) {
     navHide.value = true
   } else {
     navHide.value = false
   }
-  
+
   if (newValue > 100) {
     textWhite.value = false
   } else {
@@ -102,12 +102,10 @@ async function toggleLocale(lang: string) {
   localStorage.setItem('locale', lang)
   locale.value = lang
 }
-
-
 </script>
 
 <template>
-  <nav  fixed w-full top-0 z-999 transition ease-in-out duration-300 :class="[{ 'nav-hide': navHide, 'text-white': textWhite }, '-translate-y-0']">
+  <nav fixed w-full top-0 z-999 transition ease-in-out duration-300 :class="[{ 'nav-hide': navHide, 'text-white': textWhite }, '-translate-y-0']">
     <div class="bg-transparent backdrop-blur-xl shadow-xl h-12 flex justify-between text-4">
       <!-- LEFT -->
       <div class="nav-left flex">
@@ -120,36 +118,24 @@ async function toggleLocale(lang: string) {
         </span>
       </div>
       <!-- RIGHT -->
-      <div class="nav-right md:flex hidden">
-        <!-- <div class="mx-1 flex text-white p-3px items-center">
-          <NDropdown trigger="hover" :options="undefined" >
-            <div>
-            <div i-carbon-earth-filled />首页
-            </div>
-          </NDropdown>
-        </div> -->
-        <!-- <RouterLink :to="item.url" v-for="(item, index) in navMenu" :key="index">
-          <span :[item.icon]="''" class="mr-2px" />
-          {{$t(item.title)}}
-           <ul class="drop absolute list-none w-full top-10 bg-black mt-2">
-              <li>scss</li>
-              <li>jquery</li>
-              <li>html</li>
-          </ul>  
-        </RouterLink> -->
-        
+      <div class="nav-right md:flex hidden items-center">
         <NDropdown trigger="hover" :options="item.sub" v-for="(item, index) in navMenu" :key="index">
           <RouterLink :to="item.url" v-if="item.sub === undefined">
-            <span :[item.icon]="''" class="mr-2px" />
-            {{$t(item.title)}}
+            <div :[item.icon]="''" class="mr-2px" />
+            {{ $t(item.title) }}
           </RouterLink>
           <!-- DROPDOWN -->
           <a v-else class="select-none">
             <span :[item.icon]="''" class="mr-2px" />
-            {{$t(item.title)}}
+            {{ $t(item.title) }}
           </a>
         </NDropdown>
-        
+
+        <RouterLink to="/">
+          <div i-carbon:tag-group class="mr-2px" />
+          {{ $t('header.home') }}
+        </RouterLink>
+
         <div class="mx-1 flex text-white p-3px items-center">
           <NDropdown trigger="hover" :options="options" :on-select="toggleLocale">
             <div i-carbon-earth-filled :title="$t('button.toggle_langs')" />
@@ -170,7 +156,6 @@ async function toggleLocale(lang: string) {
   display: none;
 }
 
-
 .nav-hide {
   transform: translateY(-100%);
 }
@@ -180,7 +165,7 @@ async function toggleLocale(lang: string) {
     display: flex;
     align-items: center;
   }
-  
+
   &:hover {
     .big-logo {
       display: block;
@@ -194,11 +179,10 @@ async function toggleLocale(lang: string) {
     position: relative;
     align-items: center;
     margin-left: 0.5rem;
-    
-    &:hover {
-     background-color: aqua;
-    }
 
+    &:hover {
+      background-color: aqua;
+    }
   }
 }
 </style>
