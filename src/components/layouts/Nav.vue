@@ -1,50 +1,39 @@
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref, watch, h } from 'vue'
+import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
 import { NDropdown } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import options from '@/locales/options'
 
-const renderIcon = (icon: string) => {
-  return () => {
-    return h('div', { class: icon })
-  }
-}
-
 const { locale } = useI18n()
+
 const navMenu = [
   {
     title: 'header.home',
     url: '/',
     icon: 'i-carbon-home',
+  },
+  {
+    title: 'header.blog',
+    url: '/blogs',
+    to: true,
+    icon: 'i-iconoir-page',
     sub: [
       {
-        label: '简体',
-        icon: renderIcon('i-carbon-earth-filled'),
+        title: 'header.archives',
+        url: '/archives',
+        icon: 'i-carbon-earth-filled',
       },
       {
-        label: '繁體',
-        icon: renderIcon('i-carbon-earth-filled'),
+        title: 'header.categories',
+        url: '/categories',
+        icon: 'i-carbon-data-vis-1',
       },
       {
-        label: '日本語',
-        icon: renderIcon('i-carbon-earth-filled'),
+        title: 'header.tags',
+        url: '/tags',
+        icon: 'i-carbon:tag-group',
       },
     ],
-  },
-  {
-    title: 'header.archives',
-    url: '/archives',
-    icon: 'i-iconoir-page',
-  },
-  {
-    title: 'header.categories',
-    url: '/categories',
-    icon: 'i-carbon-data-vis-1',
-  },
-  {
-    title: 'header.tags',
-    url: '/tags',
-    icon: 'i-carbon:tag-group',
   },
   {
     title: 'header.about',
@@ -63,6 +52,7 @@ const navMenu = [
   },
 ]
 
+// 导航菜单
 console.log(`output->navMenu`, navMenu)
 
 // 滚动事件
@@ -108,7 +98,7 @@ async function toggleLocale(lang: string) {
   <nav fixed w-full top-0 z-999 transition ease-in-out duration-300 :class="[{ 'nav-hide': navHide, 'text-white': textWhite }, '-translate-y-0']">
     <div class="bg-transparent backdrop-blur-xl shadow-xl h-12 flex justify-between text-4">
       <!-- LEFT -->
-      <div class="nav-left flex">
+      <div class="nav-left flex items-center">
         <RouterLink to="/">
           <span i-icon:nogiruka class="mr-2px" />
           <span class="sm:block hidden">{{ $t('header.name') }}</span>
@@ -118,29 +108,22 @@ async function toggleLocale(lang: string) {
         </span>
       </div>
       <!-- RIGHT -->
-      <div class="nav-right md:flex hidden items-center">
-        <NDropdown trigger="hover" :options="item.sub" v-for="(item, index) in navMenu" :key="index">
-          <RouterLink :to="item.url" v-if="item.sub === undefined">
-            <div :[item.icon]="''" class="mr-2px" />
-            {{ $t(item.title) }}
-          </RouterLink>
+      <div class="nav-right flex items-center">
+        <RouterLink :to="item.url" :title="item.title" v-for="(item, index) in navMenu" :key="index">
+          <span :class="item.icon" />
+          <div class="hidden md:flex">{{ $t(item.title) }}</div>
           <!-- DROPDOWN -->
-          <a v-else class="select-none">
-            <span :[item.icon]="''" class="mr-2px" />
+          <a :title="item.title" cursor-default v-if="item.sub !== undefined">
+            <span :class="item.icon" />
             {{ $t(item.title) }}
           </a>
-        </NDropdown>
-
-        <RouterLink to="/">
-          <div i-carbon:tag-group class="mr-2px" />
-          {{ $t('header.home') }}
         </RouterLink>
 
-        <div class="mx-1 flex text-white p-3px items-center">
-          <NDropdown trigger="hover" :options="options" :on-select="toggleLocale">
+        <a>
+          <NDropdown trigger="hover" :options="options" @select="toggleLocale">
             <div i-carbon-earth-filled :title="$t('button.toggle_langs')" />
           </NDropdown>
-        </div>
+        </a>
       </div>
     </div>
   </nav>
@@ -182,6 +165,10 @@ async function toggleLocale(lang: string) {
 
     &:hover {
       background-color: aqua;
+    }
+
+    span {
+      margin-right: 2px;
     }
   }
 }
