@@ -5,24 +5,27 @@ header:
   archives: Archives
   categories: Categories
   tags: Tags
+  talks: Talks
   about: About
+  more: More
+  messages: Message board
   friends: Friends
   timeline: Timeline
 hitokoto:
-  loading: Hitokoto is loading
+  loading: The next sentence is...?
 button:
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
 global:
   not-found: Page not found
-  back: return
+  back: Return
   prev: Previous page
   next: Next page
   comments: Comment
   toc: Table of contents
-  share: share
+  share: Share
   donate: Donate
-  search: search
+  search: Search
   search_placeholder: search
   search_button: search
   search_result: search results

@@ -5,8 +5,11 @@ header:
   archives: คลังเก็บเอกสารสำคัญ
   categories: การจัดหมวดหมู่
   tags: ฉลาก
+  talks: พูดถึงมัน
   about: เกี่ยวกับ
-  friends: หนังสือแห่งเพื่อน
+  more: มากกว่า
+  messages: กระดานข้อความ
+  friends: หนังสือของเพื่อน
   timeline: แกนเวลา
 hitokoto:
   loading: ประโยคต่อไปคือ...?
@@ -16,7 +19,7 @@ button:
 global:
   not-found: ไม่พบหน้านี้
   back: กลับ
-  prev: หน้าก่อน
+  prev: หน้าก่อนหน้า
   next: หน้าต่อไป
   comments: ความคิดเห็น
   toc: สารบัญ

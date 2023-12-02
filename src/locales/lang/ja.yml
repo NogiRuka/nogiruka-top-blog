@@ -1,18 +1,21 @@
 header:
   name: 乃木流架
   home: ホーム
-  articles: 記事
+  articles: 文章
   archives: アーカイブ
-  categories: カテゴリー
+  categories: 分類
   tags: ラベル
+  talks: それについて話します
   about: について
+  more: もっと
+  messages: 伝言板
   friends: 友人帳
   timeline: 時間軸
 hitokoto:
   loading: 次の文は…?
 button:
-  toggle_dark: ダークモードを切り替える
-  toggle_langs: 言語を切り替える
+  toggle_dark: ダークモード切り替え
+  toggle_langs: 言語切り替え
 global:
   not-found: ページが見つかりません
   back: 戻る
