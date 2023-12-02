@@ -4,6 +4,7 @@ import { NDropdown } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import options from '@/locales/options'
 
+
 const { locale } = useI18n()
 
 const navMenu = [
@@ -112,8 +113,8 @@ async function toggleLocale(lang: string) {
 </script>
 
 <template>
-  <nav fixed w-full top-0 z-999 transition ease-in-out duration-300 :class="[{ 'nav-hide': navHide, 'text-white': textWhite }, '-translate-y-0']">
-    <div class="bg-transparent backdrop-blur-xl shadow-xl h-12 flex justify-between text-4">
+  <nav fixed w-full top-0 z-999 transition ease-out duration-300 :class="[{ 'nav-hide': navHide }, '-translate-y-0']">
+    <div class="bg-transparent h-12 flex justify-between text-4" :class="[{ 'text-white':textWhite },'']">
       <!-- LEFT -->
       <div class="nav-left flex items-center">
         <RouterLink to="/">
@@ -188,10 +189,16 @@ async function toggleLocale(lang: string) {
   transform: translateY(-100%);
 }
 
+nav {
+  backdrop-filter: blur(8px) brightness(1.2);
+  -webkit-backdrop-filter: blur(8px) brightness(1.2);
+}
+
 .nav-left {
   a {
     display: flex;
     align-items: center;
+    margin-left: .5rem;
   }
 
   &:hover {
