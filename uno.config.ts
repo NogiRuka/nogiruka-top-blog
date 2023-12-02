@@ -12,6 +12,9 @@ import {
 } from 'unocss'
 
 export default defineConfig({
+  rules: [
+  ['text-nowrap', { 'text-wrap': 'nowrap' }],
+  ],
   shortcuts: [
     // ...
   ],

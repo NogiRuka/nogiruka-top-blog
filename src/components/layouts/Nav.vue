@@ -13,9 +13,8 @@ const navMenu = [
     icon: 'i-carbon-home',
   },
   {
-    title: 'header.blog',
-    url: '/blogs',
-    to: true,
+    title: 'header.articles',
+    url: '/articles',
     icon: 'i-iconoir-page',
     sub: [
       {
@@ -36,19 +35,37 @@ const navMenu = [
     ],
   },
   {
+    title: 'header.talks',
+    url: '/talks',
+    icon: 'i-carbon-chat',
+  },
+  {
     title: 'header.about',
     url: '/about',
     icon: 'i-tabler:mood-heart',
   },
   {
-    title: 'header.friends',
-    url: '/friends',
-    icon: 'i-solar-link-round-angle-linear',
-  },
-  {
-    title: 'header.timeline',
-    url: '/timeline',
-    icon: 'i-carbon:document-sentiment',
+    title: 'header.more',
+    url: '/more',
+    to: false,
+    icon: 'i-ci-more-grid-big',
+    sub: [
+      {
+        title: 'header.messages',
+        url: '/messages',
+        icon: 'i-ic-outline-mark-unread-chat-alt',
+      },
+      {
+        title: 'header.friends',
+        url: '/friends',
+        icon: 'i-solar-link-round-angle-linear',
+      },
+      {
+        title: 'header.timeline',
+        url: '/timeline',
+        icon: 'i-carbon:document-sentiment',
+      },
+    ],
   },
 ]
 
@@ -109,16 +126,44 @@ async function toggleLocale(lang: string) {
       </div>
       <!-- RIGHT -->
       <div class="nav-right flex items-center">
-        <RouterLink :to="item.url" :title="item.title" v-for="(item, index) in navMenu" :key="index">
-          <span :class="item.icon" />
-          <div class="hidden md:flex">{{ $t(item.title) }}</div>
-          <!-- DROPDOWN -->
-          <a :title="item.title" cursor-default v-if="item.sub !== undefined">
+        <div v-for="(item, index) in navMenu" :key="index">
+          <!-- REDIRECTION -->
+          <RouterLink :to="item.url" :title="$t(item.title)" v-if="item.to === undefined">
             <span :class="item.icon" />
-            {{ $t(item.title) }}
+            <div class="hidden md:flex">
+              {{ $t(item.title) }}
+            </div>
+            <!-- DROPDOWN -->
+            <ul class="dropdown-ul transition ease-in-out duration-300" v-if="item.sub !== undefined">
+              <li v-for="(sub, index) in item.sub" :key="index" class="dropdown-li">
+                <RouterLink :to="sub.url" :title="$t(sub.title)">
+                  <span :class="sub.icon" />
+                  <div class="text-nowrap">
+                    {{ $t(sub.title) }}
+                  </div>
+                </RouterLink>
+              </li>
+            </ul>
+          </RouterLink>
+          <!-- NO REDIRECTION -->
+          <a cursor-default :title="$t(item.title)" v-else>
+            <span :class="item.icon" />
+            <div class="text-nowrap">
+              {{ $t(item.title) }}
+            </div>
+            <!-- DROPDOWN -->
+            <ul class="dropdown-ul transition ease-in-out duration-300" v-if="item.sub !== undefined">
+              <li v-for="(sub, index) in item.sub" :key="index" class="dropdown-li">
+                <RouterLink :to="sub.url" :title="$t(sub.title)">
+                  <span :class="sub.icon" />
+                  <div class="text-nowrap">
+                    {{ $t(sub.title) }}
+                  </div>
+                </RouterLink>
+              </li>
+            </ul>
           </a>
-        </RouterLink>
-
+        </div>
         <a>
           <NDropdown trigger="hover" :options="options" @select="toggleLocale">
             <div i-carbon-earth-filled :title="$t('button.toggle_langs')" />
@@ -161,10 +206,35 @@ async function toggleLocale(lang: string) {
     display: flex;
     position: relative;
     align-items: center;
-    margin-left: 0.5rem;
+    margin: 0 0.2rem;
+    padding: 0 0.5rem;
+    justify-content: center;
 
     &:hover {
-      background-color: aqua;
+      .dropdown-ul {
+        display: block;
+
+        a:hover {
+          background-color: rgb(243, 181, 181);
+        }
+      }
+    }
+
+    .dropdown-ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      // background-color: #159bd4;
+      // background-color: black;
+      opacity: 1;
+      backdrop-filter: blur(10px);
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+
+      .dropdown-li {
+        width: auto;
+        margin: 0.4rem 0;
+      }
     }
 
     span {
