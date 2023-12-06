@@ -8,7 +8,7 @@ header:
   talks: Talks
   about: About
   more: More
-  messages: Message board
+  messages: Msg board
   friends: Friends
   timeline: Timeline
 hitokoto:
@@ -17,7 +17,7 @@ button:
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
 global:
-  not-found: Page not found
+  not_found: Page not found
   back: Return
   prev: Previous page
   next: Next page

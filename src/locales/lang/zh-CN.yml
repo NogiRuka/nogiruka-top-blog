@@ -17,7 +17,7 @@ button:
   toggle_dark: 切换深色模式
   toggle_langs: 切换语言
 global:
-  not-found: 未找到页面
+  not_found: 未找到页面
   back: 返回
   prev: 上一页
   next: 下一页

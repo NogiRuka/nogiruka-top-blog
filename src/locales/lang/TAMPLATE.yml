@@ -17,7 +17,7 @@ button:
   toggle_dark: ''
   toggle_langs: ''
 global:
-  not-found: ''
+  not_found: ''
   back: ''
   prev: ''
   next: ''

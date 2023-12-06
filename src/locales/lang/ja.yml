@@ -17,7 +17,7 @@ button:
   toggle_dark: ダークモード切り替え
   toggle_langs: 言語切り替え
 global:
-  not-found: ページが見つかりません
+  not_found: ページが見つかりません
   back: 戻る
   prev: 前のページ
   next: 次のページ

@@ -17,7 +17,7 @@ button:
   toggle_dark: สลับโหมดมืด
   toggle_langs: เปลี่ยนภาษา
 global:
-  not-found: ไม่พบหน้านี้
+  not_found: ไม่พบหน้านี้
   back: กลับ
   prev: หน้าก่อนหน้า
   next: หน้าต่อไป

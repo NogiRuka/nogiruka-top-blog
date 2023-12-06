@@ -1,13 +1,23 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
-import { NDropdown } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 import options from '@/locales/options'
 
-
 const { locale } = useI18n()
 
-const navMenu = [
+type NavMenuItem = {
+  title: string
+  titleShow?: boolean
+  key?: string
+  url?: string
+  to?: boolean
+  icon?: string
+  sub?: NavMenuItem[]
+}
+
+type NavMenu = NavMenuItem[]
+
+const navMenu: NavMenu = [
   {
     title: 'header.home',
     url: '/',
@@ -68,6 +78,12 @@ const navMenu = [
       },
     ],
   },
+  {
+    title: 'button.toggle_langs',
+    titleShow: false,
+    icon: 'i-carbon-earth-filled',
+    sub: options,
+  },
 ]
 
 // 导航菜单
@@ -103,7 +119,8 @@ onBeforeUnmount(() => {
 })
 
 // 国际化
-async function toggleLocale(lang: string) {
+async function toggleLocale(l: string | undefined) {
+  const lang = l === undefined ? 'zh-CN' : l
   if (typeof document !== 'undefined') {
     document.querySelector('html')?.setAttribute('lang', lang)
   }
@@ -113,8 +130,8 @@ async function toggleLocale(lang: string) {
 </script>
 
 <template>
-  <nav fixed w-full top-0 z-999 transition ease-out duration-300 :class="[{ 'nav-hide': navHide, 'text-white':textWhite }, '-translate-y-0']">
-    <div class="bg-transparent h-12 flex justify-between text-4 shadow-xl" :class="[{  },'']">
+  <nav fixed w-full top-0 z-999 transition ease-out duration-300 :class="[{ 'nav-hide': navHide, 'text-white': textWhite }, '-translate-y-0']">
+    <div class="bg-transparent h-12 flex justify-between text-4 shadow-xl" :class="[{}, '']">
       <!-- LEFT -->
       <div class="nav-left flex items-center">
         <RouterLink to="/">
@@ -129,47 +146,69 @@ async function toggleLocale(lang: string) {
       <div class="nav-right flex items-center">
         <div v-for="(item, index) in navMenu" :key="index">
           <!-- REDIRECTION -->
-          <RouterLink :to="item.url" :title="$t(item.title)" v-if="item.to === undefined">
-            <span :class="item.icon" />
-            <div class="hidden md:flex">
-              {{ $t(item.title) }}
+          <div v-if="item.url !== undefined">
+            <!-- GOTO -->
+            <div v-if="item.to !== false">
+              <RouterLink :to="item.url" :title="$t(item.title)">
+                <span :class="item.icon" />
+                <div class="hidden md:flex">
+                  {{ $t(item.title) }}
+                </div>
+                <!-- DROPDOWN -->
+                <ul class="dropdown-ul transition ease-in-out duration-300" v-if="item.sub !== undefined">
+                  <li v-for="(sub, index) in item.sub" :key="index" class="dropdown-li">
+                    <RouterLink :to="sub.url as string" :title="$t(sub.title)">
+                      <span :class="sub.icon" />
+                      <div class="text-nowrap">
+                        {{ $t(sub.title) }}
+                      </div>
+                    </RouterLink>
+                  </li>
+                </ul>
+              </RouterLink>
             </div>
-            <!-- DROPDOWN -->
-            <ul class="dropdown-ul transition ease-in-out duration-300" v-if="item.sub !== undefined">
-              <li v-for="(sub, index) in item.sub" :key="index" class="dropdown-li">
-                <RouterLink :to="sub.url" :title="$t(sub.title)">
-                  <span :class="sub.icon" />
-                  <div class="text-nowrap">
-                    {{ $t(sub.title) }}
-                  </div>
-                </RouterLink>
-              </li>
-            </ul>
-          </RouterLink>
+            <!-- NO GOTO -->
+            <div v-else>
+              <a cursor-default :title="$t(item.title)">
+                <span :class="item.icon" />
+                <div class="hidden md:flex">
+                  {{ $t(item.title) }}
+                </div>
+                <!-- DROPDOWN -->
+                <ul class="dropdown-ul transition ease-in-out duration-300" v-if="item.sub !== undefined">
+                  <li v-for="(sub, index) in item.sub" :key="index" class="dropdown-li">
+                    <RouterLink :to="sub.url as string" :title="$t(sub.title)">
+                      <span :class="sub.icon" />
+                      <div class="text-nowrap">
+                        {{ $t(sub.title) }}
+                      </div>
+                    </RouterLink>
+                  </li>
+                </ul>
+              </a>
+            </div>
+          </div>
           <!-- NO REDIRECTION -->
-          <a cursor-default :title="$t(item.title)" v-else>
-            <span :class="item.icon" />
-            <div class="text-nowrap">
-              {{ $t(item.title) }}
-            </div>
-            <!-- DROPDOWN -->
-            <ul class="dropdown-ul transition ease-in-out duration-300" v-if="item.sub !== undefined">
-              <li v-for="(sub, index) in item.sub" :key="index" class="dropdown-li">
-                <RouterLink :to="sub.url" :title="$t(sub.title)">
-                  <span :class="sub.icon" />
-                  <div class="text-nowrap">
-                    {{ $t(sub.title) }}
-                  </div>
-                </RouterLink>
-              </li>
-            </ul>
-          </a>
+          <div v-else>
+            <a cursor-default :title="$t(item.title)" class="!justify-end">
+              <span :class="item.icon" />
+              <div class="text-nowrap" v-if="item.titleShow !== false">
+                {{ $t(item.title) }}
+              </div>
+              <!-- DROPDOWN -->
+              <ul class="dropdown-ul transition ease-in-out duration-300" v-if="item.sub !== undefined">
+                <li v-for="(sub, key) in item.sub" :key="key" class="dropdown-li">
+                  <a @click="toggleLocale(sub.key)">
+                    <span :class="sub.icon" v-if="sub.icon !== undefined" />
+                    <div class="text-nowrap">
+                      {{ sub.title }}
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </a>
+          </div>
         </div>
-        <a>
-          <NDropdown trigger="hover" :options="options" @select="toggleLocale">
-            <div i-carbon-earth-filled :title="$t('button.toggle_langs')" />
-          </NDropdown>
-        </a>
       </div>
     </div>
   </nav>
@@ -198,7 +237,7 @@ nav {
   a {
     display: flex;
     align-items: center;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
   }
 
   &:hover {
@@ -240,7 +279,11 @@ nav {
 
       .dropdown-li {
         width: auto;
-        margin: 0.4rem 0;
+        margin: .4rem .2rem;
+        
+        a {
+          padding: .3rem .3rem
+        }
       }
     }
 

@@ -1,22 +1,22 @@
 const options = [
   {
-    label: '简体中文',
+    title: '简体中文',
     key: 'zh-CN',
   },
   {
-    label: '繁體中文',
+    title: '繁體中文',
     key: 'zh-TW',
   },
   {
-    label: '日本語',
+    title: '日本語',
     key: 'ja',
   },
   {
-    label: 'ภาษาไทย',
+    title: 'ภาษาไทย',
     key: 'th',
   },
   {
-    label: 'English',
+    title: 'English',
     key: 'en',
   },
 ]
