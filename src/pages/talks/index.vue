@@ -1,11 +1,10 @@
 <script setup lang='ts'>
-
+import NogiDropdown from '@/components/nogi/NogiDropdown.vue';
+import options from '@/locales/options'
 </script>
 
 <template>
-  <div class="absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-1/2 text-8xl text-white">
-    index.vue
-  </div>
+  <NogiDropdown :options="options"></NogiDropdown>
 </template>
 
 <style scoped lang='scss'>
