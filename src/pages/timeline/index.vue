@@ -1,11 +1,7 @@
 <script setup lang='ts'>
-import { NotionRenderer, getPageBlocks, getPageTable } from 'vue-notion'
+import blockMap from '@/api/vue-notion/getPageBlocks.ts'
+import { NotionRenderer } from 'vue-notion'
 
-const blockMap: any = await getPageBlocks(import.meta.env.VITE_NOTION_PAGE_ID, import.meta.env.VITE_NOTION_API_WORKER)
-const tableMap: any = await getPageTable(import.meta.env.VITE_NOTION_DATABASE_ID, import.meta.env.VITE_NOTION_API_WORKER)
-
-console.log(`output->blockMap`, blockMap)
-console.log(`output->tableMap`, tableMap)
 </script>
 
 <template>
