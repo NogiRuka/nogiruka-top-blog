@@ -40,13 +40,13 @@ export default defineConfig({
     port: 4000, // 服务端口号
     open: true, // 服务启动时自动打开浏览器
     cors: true, // 允许跨域
-    // proxy: {
-    //   '/api': {
-    //     target: 'https://api.notion.com', //目标源，目标服务器，真实请求地址
-    //     changeOrigin: true, //支持跨域
-    //     rewrite: (path) => path.replace(/^\/api/, ''), //重写真实路径,替换/api
-    //   },
-    // },
+    proxy: {
+      '/api': {
+        target: 'https://api.notion.com/v1', //目标源，目标服务器，真实请求地址
+        changeOrigin: true, //支持跨域
+        rewrite: (path) => path.replace(/^\/api/, ''), //重写真实路径,替换/api
+      },
+    },
   },
   build: {
     chunkSizeWarningLimit: 2000, // 消除打包大小超过500kb警告

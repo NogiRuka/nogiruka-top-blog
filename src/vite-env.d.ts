@@ -9,6 +9,8 @@ declare module '*.vue' {
 
 declare module 'vue-notion'
 
+declare module 'prismjs'
+
 // manual extension of route types
 declare module 'vue-router/auto/routes' {
   import type {

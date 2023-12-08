@@ -1,5 +1,7 @@
 <script setup lang='ts'>
+import getArticles from '@/api/nogi-notion/getArticles';
 
+getArticles();
 </script>
 
 <template>

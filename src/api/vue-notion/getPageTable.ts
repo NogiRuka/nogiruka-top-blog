@@ -1,7 +1,7 @@
 import { getPageTable } from 'vue-notion'
 
-const tableMap: any = await getPageTable(import.meta.env.VITE_NOTION_DATABASE_ID, import.meta.env.VITE_NOTION_API_WORKER)
+const pageTable: any = await getPageTable(import.meta.env.VITE_NOTION_DATABASE_ID, import.meta.env.VITE_NOTION_API_WORKER)
 
-console.log(`output->tableMap`, tableMap)
+console.log(`output->pageTable`, pageTable)
 
-export default tableMap
+export default pageTable

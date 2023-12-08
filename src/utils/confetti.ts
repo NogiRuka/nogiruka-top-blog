@@ -1,6 +1,6 @@
 import confetti from 'canvas-confetti'
 
-export function initConfetti(event: MouseEvent) {
+export default function initConfetti(event: MouseEvent) {
   // console.log(event.clientX, event.clientY);
   confetti({
     startVelocity: 10,

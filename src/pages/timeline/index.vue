@@ -1,7 +1,19 @@
 <script setup lang='ts'>
-import blockMap from '@/api/vue-notion/getPageBlocks.ts'
+import { onMounted } from 'vue'
+// import blockMap from '@/api/vue-notion/getPageBlocks'
+import pageTable from '@/api/vue-notion/getPageTable';
 import { NotionRenderer } from 'vue-notion'
+// prismjs
+import Prism from 'prismjs'
+import 'prismjs/themes/prism.min.css'
 
+console.log(`output->pageTable`,pageTable)
+
+onMounted(async () => {
+     setTimeout(() => {
+        Prism.highlightAll()// 全局代码高亮
+    }, 100)
+})
 </script>
 
 <template>
@@ -9,7 +21,7 @@ import { NotionRenderer } from 'vue-notion'
     Timeline
   </div>
 
-  <NotionRenderer :block-map="blockMap" full-page />
+  <NotionRenderer :blockMap="pageTable" full-page prism />
 </template>
 
 <style>
