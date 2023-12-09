@@ -87,7 +87,7 @@ const navMenu: NavMenu = [
 ]
 
 // 导航菜单
-console.log(`output->navMenu`, navMenu)
+// console.log(`output->navMenu`, navMenu)
 
 // 滚动事件
 const scrollY = ref(window.scrollY)

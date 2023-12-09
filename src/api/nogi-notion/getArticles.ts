@@ -10,12 +10,30 @@ let requestOptions: RequestInit = {
 
 // console.log(`output->requestOptions`, requestOptions)
 
+// type Article = {
+//   id: string;
+//   category: string;
+//   status: string;
+//   tags: string[];
+//   AISummary: string;
+//   pinned: boolean;
+//   title: string;
+// }
+
 const getArticles = () =>
-  fetch('/api/databases/33403b90-bf18-4ec6-9029-c6bd99eb78b1/query', requestOptions)
+  fetch('/api/databases/' + import.meta.env.VITE_NOTION_DATABASE_ID + '/query', requestOptions)
     .then((response) => response.text())
     .then((result) => {
-      console.log(JSON.parse(result))
-      return JSON.parse(result)
+      const res = JSON.parse(result).results
+      // console.log(res)
+      const articles: any = res.map(i => {
+        return {
+          id: i.id,
+          properties: i.properties,
+        }
+      })
+      console.log(`output->articles`, articles)
+      return articles
     })
     .catch((error) => console.log('error', error))
 
