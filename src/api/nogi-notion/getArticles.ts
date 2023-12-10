@@ -11,18 +11,6 @@ let requestOptions: RequestInit = {
   redirect: 'follow',
 }
 
-// console.log(`output->requestOptions`, requestOptions)
-
-// type Article = {
-//   id: string;
-//   category: string;
-//   status: string;
-//   tags: string[];
-//   AISummary: string;
-//   pinned: boolean;
-//   title: string;
-// }
-
 const getArticles = () =>
   fetch('/api/databases/' + import.meta.env.VITE_NOTION_DATABASE_ID + '/query', requestOptions)
     .then((response) => response.text())

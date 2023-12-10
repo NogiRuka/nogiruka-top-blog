@@ -1,10 +1,9 @@
 <script setup lang='ts'>
+import HalfBg from '@/components/layouts/HalfBg.vue'
 </script>
 
 <template>
-  <div class="absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-1/2 text-8xl text-white">
-    Categories
-  </div>
+  <HalfBg type="route" info="分类列表" />
 </template>
 
 <style></style>

@@ -1,5 +1,6 @@
 <script setup lang='ts'>
 import { onMounted } from 'vue'
+import HalfBg from '@/components/layouts/HalfBg.vue'
 // import blockMap from '@/api/vue-notion/getPageBlocks'
 import pageTable from '@/api/vue-notion/getPageTable';
 import { NotionRenderer } from 'vue-notion'
@@ -17,10 +18,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-1/2 text-8xl text-white">
-    Timeline
-  </div>
-
+  <HalfBg type="route" info="时间轴" />
   <NotionRenderer :blockMap="pageTable" full-page prism />
 </template>
 
