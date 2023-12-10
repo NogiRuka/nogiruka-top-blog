@@ -31,3 +31,6 @@ global:
   search_result: ''
   search_no_result: ''
   search_no_more: ''
+footer:
+  base: ''
+  text: ''

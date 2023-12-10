@@ -16,6 +16,7 @@
     "@vueuse/core": "^10.6.1",
     "aplayer": "^1.10.1",
     "canvas-confetti": "^1.9.0",
+    "moment": "^2.29.4",
     "pinia": "^2.1.7",
     "prismjs": "^1.29.0",
     "vue": "^3.3.4",

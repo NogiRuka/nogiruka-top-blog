@@ -30,5 +30,6 @@ onMounted(async () => {
 </style>
 
 <route lang='yaml'>
-name: timeline
+meta:
+  title: 时间轴
 </route>

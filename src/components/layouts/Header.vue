@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import Nav from '@/components/layouts/Nav.vue'
-import Bg from '@/components/layouts/Bg.vue'
+
 </script>
 
 <template>
   <header>
     <Nav />
-    <Bg />
   </header>
 </template>
 

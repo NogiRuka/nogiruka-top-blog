@@ -31,3 +31,8 @@ global:
   search_result: 搜尋結果
   search_no_result: 未找到相關結果
   search_no_more: 已經到底了
+footer:
+  base: 本站已運作 {day} 天 {hour} 小時 {minute} 分 {second} 秒，瀏覽量：
+  base1:  次，訪客數：
+  base2:  人
+  text: © 2020-2021 NogiRuka. All rights reserved.

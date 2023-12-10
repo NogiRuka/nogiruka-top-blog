@@ -11,6 +11,11 @@ header:
   messages: 留言板
   friends: 友人帐
   timeline: 时光轴
+footer:
+  text: © 2020-2021 NogiRuka. All rights reserved.
+  base: 本站已运行 {day} 天 {hour} 小时 {minute} 分 {second} 秒，浏览量：
+  base1:  次，访客数：
+  base2:  人
 hitokoto:
   loading: 下句是...?
 button:

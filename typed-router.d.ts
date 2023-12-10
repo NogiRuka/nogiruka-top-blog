@@ -44,13 +44,16 @@ declare module 'vue-router/auto/routes' {
     '/about/': RouteRecordInfo<'/about/', '/about', Record<never, never>, Record<never, never>>,
     '/archives/': RouteRecordInfo<'/archives/', '/archives', Record<never, never>, Record<never, never>>,
     '/articles/': RouteRecordInfo<'/articles/', '/articles', Record<never, never>, Record<never, never>>,
+    '/articles/[id]': RouteRecordInfo<'/articles/[id]', '/articles/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
     '/categories/': RouteRecordInfo<'/categories/', '/categories', Record<never, never>, Record<never, never>>,
+    '/categories/[name]': RouteRecordInfo<'/categories/[name]', '/categories/:name', { name: ParamValue<true> }, { name: ParamValue<false> }>,
     '/friends/': RouteRecordInfo<'/friends/', '/friends', Record<never, never>, Record<never, never>>,
     '/home/': RouteRecordInfo<'/home/', '/home', Record<never, never>, Record<never, never>>,
     '/messages/': RouteRecordInfo<'/messages/', '/messages', Record<never, never>, Record<never, never>>,
     '/tags/': RouteRecordInfo<'/tags/', '/tags', Record<never, never>, Record<never, never>>,
+    '/tags/[name]': RouteRecordInfo<'/tags/[name]', '/tags/:name', { name: ParamValue<true> }, { name: ParamValue<false> }>,
     '/talks/': RouteRecordInfo<'/talks/', '/talks', Record<never, never>, Record<never, never>>,
-    'timeline': RouteRecordInfo<'timeline', '/timeline', Record<never, never>, Record<never, never>>,
+    '/timeline/': RouteRecordInfo<'/timeline/', '/timeline', Record<never, never>, Record<never, never>>,
   }
 }
 

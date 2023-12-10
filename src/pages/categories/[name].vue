@@ -1,15 +1,13 @@
 <script setup lang='ts'>
+
 </script>
 
 <template>
-  <div class="w-3/4 h-1000px bg-red"></div>
+  <h1 class="bg-pink-500 text-8xl text-white">
+    {{ $route.params.name }}
+  </h1>
 </template>
 
 <style scoped lang='scss'>
 
 </style>
-
-<route lang='yaml'>
-meta:
-  title: 说说
-</route>

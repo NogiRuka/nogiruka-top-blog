@@ -31,3 +31,8 @@ global:
   search_result: の検索結果
   search_no_result: 関連する結果が見つかりませんでした
   search_no_more: 終わりだ
+footer:
+  base: このサイトは {day} 日 {hour} 時間 {minute} 分 {second} 秒間運営されており、ページビュー：
+  base1:  回、訪問者数：
+  base2:  人
+  text: © 2020-2021 NogiRuka.All Rights Reserved.

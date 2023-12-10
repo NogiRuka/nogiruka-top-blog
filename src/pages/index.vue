@@ -1,15 +1,19 @@
 <script setup lang='ts'>
-// import Display from '@/components/Display.vue'
+import FullBg from '@/components/layouts/FullBg.vue'
 import Hitokoto from '@/components/Hitokoto.vue'
-import ArticleList from '@/components/ArticleList.vue';
+import Display from '@/components/Display.vue'
 </script>
 
 <template>
+  <FullBg />
   <Hitokoto />
-  <!-- <Display /> -->
-  <ArticleList />
+  <Display />
 </template>
 
 <style scoped lang='scss'>
 
 </style>
+
+<route lang="yaml">
+
+</route>

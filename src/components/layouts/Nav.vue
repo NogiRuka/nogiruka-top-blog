@@ -31,7 +31,7 @@ const navMenu: NavMenu = [
       {
         title: 'header.archives',
         url: '/archives',
-        icon: 'i-carbon-earth-filled',
+        icon: 'i-bi-archive',
       },
       {
         title: 'header.categories',

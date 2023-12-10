@@ -1,10 +1,18 @@
 <script setup lang='ts'>
+
 </script>
 
 <template>
   <div class="absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-1/2 text-8xl text-white">
-    About
+    index.vue
   </div>
 </template>
 
-<style></style>
+<style scoped lang='scss'>
+
+</style>
+
+<route lang='yaml'>
+meta:
+  title: 关于博主
+</route>

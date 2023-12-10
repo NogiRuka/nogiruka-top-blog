@@ -11,6 +11,11 @@ header:
   messages: Msg board
   friends: Friends
   timeline: Timeline
+footer:
+  text: © 2020-2021 NogiRuka. All rights reserved.
+  base: The website has been running for {day} days {hour} hours {minute} minutes {second} seconds, with 
+  base1:  page views and
+  base2:  visitors.
 hitokoto:
   loading: The next sentence is...?
 button:

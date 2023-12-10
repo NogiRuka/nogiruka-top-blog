@@ -1,22 +1,30 @@
 <script setup lang='ts'>
-// 引入不蒜子计数
+
+let days: number
+let hours: number
+let minutes: number
+let seconds: number
+let hnum: string
+let mnum: string
+let snum: string
+
+// 更新网站运行时间
 function createTime(): void {
   const now: Date = new Date()
+  // 网站创建时间
   const grt: Date = new Date('10/15/2023 02:02:02')
+  
   now.setTime(now.getTime() + 250)
   const timeDiff: number = now.getTime() - grt.getTime()
 
-  const days: number = Math.floor(timeDiff / (1000 * 60 * 60 * 24))
-  const hours: number = Math.floor((timeDiff / (1000 * 60 * 60)) % 24)
-  const minutes: number = Math.floor((timeDiff / (1000 * 60)) % 60)
-  const seconds: number = Math.floor((timeDiff / 1000) % 60)
+  days = Math.floor(timeDiff / (1000 * 60 * 60 * 24))
+  hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24)
+  minutes = Math.floor((timeDiff / (1000 * 60)) % 60)
+  seconds = Math.floor((timeDiff / 1000) % 60)
 
-  const hnum: string = hours.toString().padStart(2, '0')
-  const mnum: string = minutes.toString().padStart(2, '0')
-  const snum: string = seconds.toString().padStart(2, '0')
-
-  document.getElementById('timeDate')!.innerHTML = `本站已运行 ${days} 天`
-  document.getElementById('times')!.innerHTML = `${hnum} 小时 ${mnum} 分 ${snum} 秒`
+  hnum = hours.toString().padStart(2, '0')
+  mnum = minutes.toString().padStart(2, '0')
+  snum = seconds.toString().padStart(2, '0')
 }
 
 setInterval(createTime, 250)
@@ -25,13 +33,14 @@ setInterval(createTime, 250)
 <template>
   <footer class="box-shadow py-6  bottom-0  bg-white heti--classic">
     <div class="text-center text-xl text-with-shadow">
-      <span id="timeDate" /><span id="times"><i class="fa fa-spinner fa-spin" /></span>
-      <span id="busuanzi_container_site_pv">，浏览量：<span id="busuanzi_value_site_pv"><i
-        class="fa fa-spinner fa-spin"
-      /></span> 次</span>
-      <span id="busuanzi_container_site_uv">，访客数：<span id="busuanzi_value_site_uv"><i
-        class="fa fa-spinner fa-spin"
-      /></span> 人</span>
+      <p>
+        {{ $t('footer.base', { day: days, hour: hnum, minute: mnum, second: snum }) }}
+        <span id="busuanzi_value_site_pv"><i i-svg-spinners-3-dots-rotate /></span>
+        {{ $t('footer.base1') }}
+        <span id="busuanzi_value_site_uv"><i i-svg-spinners-3-dots-rotate /></span>
+        {{ $t('footer.base2') }}
+      </p>
+
       <div class="flex justify-center items-center">
         <a href="https://github.com/NogiRuka/nogiruka-top-blog" target="_blank" class="text-black"><i i-carbon-logo-github />Github</a>
       </div>

@@ -30,3 +30,8 @@ p {
 
 <route lang="yaml">
 </route>
+
+<route lang="yaml">
+meta:
+  layout: home
+</route>
