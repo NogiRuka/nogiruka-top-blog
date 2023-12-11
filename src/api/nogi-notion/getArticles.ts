@@ -1,5 +1,5 @@
 import BLOG from '@/BLOG'
-import moment from 'moment'
+import { timeFormatByA } from '@/utils/timeFormat'
 
 let myHeaders = new Headers()
 myHeaders.append('Authorization', 'Bearer ' + import.meta.env.VITE_NOTION_API_KEY)
@@ -29,7 +29,7 @@ const getArticles = () =>
           tags: i.properties.tags.multi_select,
           password: i.properties.password.rich_text[0]?.plain_text,
           pinned: i.properties.pinned.checkbox,
-          createdAt: moment(i.properties.createdAt.created_time).format('YYYY-MM-DD HH:mm'),
+          createdAt: timeFormatByA(i.properties.createdAt.created_time),
           createdBy: i.properties.createdBy.created_by,
           updatedAt: i.properties.updatedAt.last_edited_time,
           updatedBy: i.properties.updatedBy.last_edited_by,

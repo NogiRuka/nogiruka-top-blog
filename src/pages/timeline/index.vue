@@ -1,14 +1,13 @@
 <script setup lang='ts'>
 import { onMounted } from 'vue'
 import HalfBg from '@/components/layouts/HalfBg.vue'
-// import blockMap from '@/api/vue-notion/getPageBlocks'
-import pageTable from '@/api/vue-notion/getPageTable';
+import blockMap from '@/api/vue-notion/getPageBlocks'
 import { NotionRenderer } from 'vue-notion'
 // prismjs
 import Prism from 'prismjs'
 import 'prismjs/themes/prism.min.css'
 
-console.log(`output->pageTable`,pageTable)
+console.log(`output->blockMap`,blockMap)
 
 onMounted(async () => {
      setTimeout(() => {
@@ -19,7 +18,7 @@ onMounted(async () => {
 
 <template>
   <HalfBg type="route" info="时间轴" />
-  <NotionRenderer :blockMap="pageTable" full-page prism />
+  <NotionRenderer :blockMap="blockMap" full-page prism />
 </template>
 
 <style>

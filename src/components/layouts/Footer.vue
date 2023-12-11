@@ -1,12 +1,16 @@
 <script setup lang='ts'>
+import { ref } from 'vue'
+import type { Ref } from 'vue'
 
-let days: number
+let days: Ref<number> = ref(0)
+  
 let hours: number
 let minutes: number
 let seconds: number
-let hnum: string
-let mnum: string
-let snum: string
+  
+let hnum: Ref<string> = ref('')
+let mnum: Ref<string> = ref('')
+let snum: Ref<string> = ref('')
 
 // 更新网站运行时间
 function createTime(): void {
@@ -17,14 +21,14 @@ function createTime(): void {
   now.setTime(now.getTime() + 250)
   const timeDiff: number = now.getTime() - grt.getTime()
 
-  days = Math.floor(timeDiff / (1000 * 60 * 60 * 24))
+  days.value = Math.floor(timeDiff / (1000 * 60 * 60 * 24))
   hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24)
   minutes = Math.floor((timeDiff / (1000 * 60)) % 60)
   seconds = Math.floor((timeDiff / 1000) % 60)
 
-  hnum = hours.toString().padStart(2, '0')
-  mnum = minutes.toString().padStart(2, '0')
-  snum = seconds.toString().padStart(2, '0')
+  hnum.value = hours.toString().padStart(2, '0')
+  mnum.value = minutes.toString().padStart(2, '0')
+  snum.value = seconds.toString().padStart(2, '0')
 }
 
 setInterval(createTime, 250)

@@ -6,44 +6,77 @@ defineProps<{
 
 <template>
   <article class="my-4">
-    <div class="flex flex-row text-black h-56 bg-cover border-test overflow-hidden">
+    <div class="flex flex-row text-black h-56 bg-cover overflow-hidden border-test">
       <!-- ARTICLE COVER -->
       <RouterLink :to="'/articles/' + article.id" class="w-1/2">
         <img :src="article.cover" alt="文章封面" class="w-full h-full object-cover" />
       </RouterLink>
       <!-- ARTICLE INFO -->
-      <div class="bg-yellow w-1/2">
-        <ul class="m-4 text-3 text-[#999999] flex flex-row bg-white">
-          <li>
-            <span i-material-symbols-calendar-clock-outline />
-            {{ article.createdAt }}
-          </li>
-          <li>
-            <span i-carbon-data-vis-1 />
-            <RouterLink :to="'/categories/' + article.category.name">
-              {{ article.category.name }}
-            </RouterLink>
-          </li>
-          <li>
-            <span i-carbon:tag-group />
-            <RouterLink :to="'/tags/' + article.tags[0].name">
-              {{ article.tags[0].name }}
-            </RouterLink>
-          </li>
-        </ul>
-        <h1 text-xl mx-4>{{ article.title }}</h1>
+      <div class=" w-1/2 h-inner flex flex-col ">
+        <div class="mx-4  h-full flex flex-col justify-center">
+          <!-- ARTICLE PROPERTIES -->
+          <ul class="text-3 text-[#999999] flex flex-col  ">
+            <li>
+              <span i-material-symbols-calendar-clock-outline />
+              {{ article.createdAt }}
+            </li>
+            <li flex mt-1>
+              <section mr-4>
+                <span i-carbon-data-vis-1 />
+                <RouterLink :to="'/categories/' + article.category.name">
+                  {{ article.category.name }}
+                </RouterLink>
+              </section>
+              <section flex>
+                <span i-carbon:tag-group />
+                <div v-for="tag in article.tags" :key="tag.name">
+                  <RouterLink :to="'/tags/' + tag.name">
+                    {{ tag.name }}
+                  </RouterLink>
+                  <em v-if="tag.name !== article.tags[article.tags.length - 1].name" class="mx-1">·</em>
+                </div>
+              </section>
+            </li>
+          </ul>
+          <!-- ARTICLE TITLE -->
+          <RouterLink :to="'/articles/' + article.id" :title="article.title">
+            <h1 class="text-xl  font-bold truncate">
+              {{ article.title }}
+            </h1>
+          </RouterLink>
+          <!-- ARTICLE SUMMARY -->
+          <div class="nogi-summary ">
+            {{ article.summary }}
+          </div>
+        </div>
       </div>
     </div>
   </article>
 </template>
 
 <style scoped lang="scss">
-
 ul {
-
   li {
-  margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 }
 
+section {
+  span {
+    margin-right: 0.2rem;
+  }
+}
+
+.nogi-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nogi-summary {
+  overflow: hidden;/*隐藏多出部分文字*/
+  text-overflow: ellipsis;/*用省略号代替多出部分文字*/
+  display: -webkit-box;/* 显示多行文本容器 */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;/*显示行数*/
+}
 </style>
