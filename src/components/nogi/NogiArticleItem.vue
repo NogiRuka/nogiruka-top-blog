@@ -23,17 +23,22 @@ defineProps<{
             <li flex mt-1>
               <section mr-4>
                 <span i-carbon-data-vis-1 />
-                <RouterLink :to="'/categories/' + article.category.name">
-                  {{ article.category.name }}
+                <RouterLink :to="'/categories/' + article.category?.name">
+                  {{ article.category?.name ?? '暂无分类' }}
                 </RouterLink>
               </section>
               <section flex>
                 <span i-carbon:tag-group />
-                <div v-for="tag in article.tags" :key="tag.name">
+                <div v-for="tag in article.tags" v-if="article.tags.length > 0">
                   <RouterLink :to="'/tags/' + tag.name">
                     {{ tag.name }}
                   </RouterLink>
                   <em v-if="tag.name !== article.tags[article.tags.length - 1].name" class="mx-1">·</em>
+                </div>
+                <div v-else>
+                  <RouterLink to="/tags/undefined">
+                    暂无标签
+                  </RouterLink>
                 </div>
               </section>
             </li>

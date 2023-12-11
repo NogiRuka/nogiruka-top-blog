@@ -23,7 +23,7 @@ const getArticles = () =>
           cover: i.cover?.external === undefined ? BLOG.ARTICLE_COVER_DEFAULT : i.cover.external.url,
           url: i.url,
           title: i.properties.title.title[0].plain_text,
-          summary: i.properties.AISummary.rich_text[0].plain_text,
+          summary: i.properties.AISummary.rich_text[0]?.plain_text,
           status: i.properties.status.status,
           category: i.properties.category.select,
           tags: i.properties.tags.multi_select,

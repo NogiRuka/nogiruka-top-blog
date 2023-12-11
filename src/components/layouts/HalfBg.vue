@@ -7,6 +7,7 @@ defineProps<{
   info?: any
 }>()
 
+
 const num: number[] = [1, 2, 3, 4, 5]
 console.log(`output->num`, num)
 const randomIndex = Math.floor(Math.random() * num.length)

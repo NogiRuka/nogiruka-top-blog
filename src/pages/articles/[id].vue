@@ -1,13 +1,17 @@
 <script setup lang='ts'>
 import { onMounted } from 'vue'
 import HalfBg from '@/components/layouts/HalfBg.vue'
-import blockMap from '@/api/vue-notion/getPageBlocks'
+// import NogiArticle from '@/components/nogi/NogiArticle.vue';
 import { NotionRenderer } from 'vue-notion'
+import getArticle from '@/api/nogi-notion/getArticle';
+import { useRoute } from 'vue-router';
+
 // prismjs
 import Prism from 'prismjs'
 import 'prismjs/themes/prism.min.css'
 
-console.log(`output->blockMap`,blockMap)
+const route = useRoute();
+const blockMap: any = await getArticle(route.params.id as string)
 
 onMounted(async () => {
      setTimeout(() => {
@@ -19,6 +23,7 @@ onMounted(async () => {
 <template>
   <HalfBg type="article" info="文章详情" />
   <div class="flex flex-col bg-white w-4/6 my-8 py-4 px-8">
+    <!-- {{ $route.params.id }} -->
     <NotionRenderer :blockMap="blockMap" full-page prism />
   </div>
 </template>
