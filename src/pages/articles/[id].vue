@@ -29,8 +29,7 @@ onMounted(async () => {
 </template>
 
 <style scoped lang='scss'>
-/* optional Notion-like styles */
-@import "vue-notion/src/styles.css";
+
 </style>
 
 <route lang="yaml">

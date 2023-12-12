@@ -51,7 +51,7 @@ defineProps<{
           </RouterLink>
           <!-- ARTICLE SUMMARY -->
           <div class="nogi-summary ">
-            {{ article.summary }}
+            {{ article.summary ?? '暂无简介' }}
           </div>
         </div>
       </div>
@@ -78,10 +78,13 @@ section {
   text-overflow: ellipsis;
 }
 .nogi-summary {
+  color: #6a6a6a;
+  font-size: 14px;
+  line-height: 1.4rem;
   overflow: hidden;/*隐藏多出部分文字*/
   text-overflow: ellipsis;/*用省略号代替多出部分文字*/
   display: -webkit-box;/* 显示多行文本容器 */
   -webkit-box-orient: vertical;
-  -webkit-line-clamp:3;/*显示行数*/
+  -webkit-line-clamp:2;/*显示行数*/
 }
 </style>

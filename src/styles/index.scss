@@ -6,3 +6,5 @@
 
 @use './common/scrollbar.scss';
 
+/* optional Notion-like styles */
+@use "vue-notion/src/styles.css";
