@@ -294,7 +294,7 @@ nav {
 }
 
 .nogi-text-shadow {
-  text-shadow: 0px 1px 20px rgb(243, 181, 181);
+  text-shadow: 0px 1px 10px rgb(103, 94, 94);
 ;
 
 }

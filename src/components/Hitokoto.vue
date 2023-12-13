@@ -35,7 +35,7 @@ fetch('https://v1.hitokoto.cn?c=d&c=i&c=k')
 
 <template>
   <div id="hitokoto" class=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-sm">
-    <div class="bg-transparent  rounded-lg text-xl justify-center px-6 w-180 h-60 flex flex-col justify-items-stretch heti font-qingke text-white">
+    <div class="bg-transparent  rounded-lg text-xl justify-center px-20 w-240 h-80 flex flex-col justify-items-stretch heti font-qingke text-white">
       <div class="pt-5 !text-3xl ">
         <a id="hitokoto_text" href="#" target="_blank">
           {{ $t('hitokoto.loading') }}
@@ -55,5 +55,7 @@ fetch('https://v1.hitokoto.cn?c=d&c=i&c=k')
 </template>
 
 <style lang='scss' scoped>
-
+#hitokoto {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3CforeignObject width='100%25' height='100%25'%3E%3Cbody class='wrap' xmlns='http://www.w3.org/1999/xhtml'%3E%3Cstyle%3E.wrap%7Bbox-sizing:border-box;margin:0;height:100%25;padding:10px%7D.shadow%7Bheight:100%25;background:%23000;border-radius:10px;box-shadow:0 0 5px %23000,0 0 10px %23000,0 0 15px %23000%7D%3C/style%3E%3Cdiv class='shadow'/%3E%3C/body%3E%3C/foreignObject%3E%3C/svg%3E");
+}
 </style>
