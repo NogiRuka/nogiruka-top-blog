@@ -22,7 +22,7 @@
       ]
     },
     "resolveJsonModule": true,
-    "types": ["vite-plugin-vue-layouts/client"],
+    // "types": ["vite-plugin-vue-layouts/client"],
     "allowImportingTsExtensions": true,
     /* Linting */
     "strict": true,
@@ -31,7 +31,8 @@
     "noUnusedParameters": true,
     "noEmit": true,
     "isolatedModules": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "noImplicitAny": false
   },
   "references": [
     {
@@ -42,7 +43,10 @@
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "./env.d.ts",
+    "./typed-router.d.ts",
+    "./client.d.ts",
   ],
   "exclude": [
     "node_modules"

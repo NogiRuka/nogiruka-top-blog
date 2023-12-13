@@ -17,7 +17,7 @@ const getArticles = () =>
     .then((result) => {
       const res = JSON.parse(result).results
       console.log(res)
-      const articles: any = res.map(i => {
+      const articles: any = res.map((i) => {
         return {
           id: i.id,
           cover: i.cover?.external === undefined ? BLOG.ARTICLE_COVER_DEFAULT : i.cover.external.url,

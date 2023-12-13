@@ -5,7 +5,7 @@ import HalfBg from '@/components/layouts/HalfBg.vue'
 <template>
   <HalfBg type="article" info="标签文章" />
   <h1 class="bg-pink-500 text-8xl text-white">
-    {{ $route.params.name }}
+    {{ $route.params['name'] }}
   </h1>
 </template>
 
