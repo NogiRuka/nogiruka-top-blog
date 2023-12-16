@@ -16,7 +16,7 @@ document.addEventListener('click', (e: MouseEvent) => initConfetti(e))
 const app = createApp(App)
 
 app.use(router)
-  .use(i18n)
-  .use(createPinia())
+    .use(i18n)
+      .use(createPinia())
 
 app.mount('#nogiruka')

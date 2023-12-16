@@ -11,6 +11,9 @@ let requestOptions: RequestInit = {
   redirect: 'follow',
 }
 
+// todo 利用随机壁纸接口代替默认封面
+// https://api.aa1.cn/doc/wallpaper.html
+
 const getArticles = () =>
   fetch('/api/databases/' + import.meta.env.VITE_NOTION_DATABASE_ID + '/query', requestOptions)
     .then((response) => response.text())
