@@ -15,7 +15,7 @@ let requestOptions: RequestInit = {
 // https://api.aa1.cn/doc/wallpaper.html
 
 const getArticles = () =>
-  fetch('/api/databases/' + import.meta.env.VITE_NOTION_DATABASE_ID + '/query', requestOptions)
+  fetch('/api-notion/v1/databases/' + import.meta.env.VITE_NOTION_DATABASE_ID + '/query', requestOptions)
     .then((response) => response.text())
     .then((result) => {
       const res = JSON.parse(result).results
