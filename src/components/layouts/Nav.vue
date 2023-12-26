@@ -130,7 +130,7 @@ async function toggleLocale(l: string | undefined) {
 </script>
 
 <template>
-  <nav fixed w-full top-0 z-999 transition ease-out duration-300 :class="[{ 'nav-hide': navHide, 'text-white nogi-text-shadow': textWhite }, '-translate-y-0']">
+  <nav fixed w-full top-0 z-999 transition ease-out duration-300 :class="[{ 'nav-hide': navHide, 'text-white': textWhite }, '-translate-y-0']">
     <div class="bg-transparent h-12 flex justify-between text-4 shadow-xl" :class="[{}, '']">
       <!-- LEFT -->
       <div class="nav-left flex items-center">
@@ -291,12 +291,6 @@ nav {
       margin-right: 2px;
     }
   }
-}
-
-.nogi-text-shadow {
-  text-shadow: 0px 1px 10px rgb(103, 94, 94);
-;
-
 }
 
 </style>

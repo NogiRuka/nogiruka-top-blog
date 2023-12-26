@@ -49,9 +49,7 @@ export default defineConfig((env) => {
         [evnMap.VITE_APP_PROXY_BASE_API]: {
           target: 'https://api.notion.com', //目标源，目标服务器，真实请求地址
           changeOrigin: true, //是否跨域
-          // rewrite: (path) => path.replace(/^\/api/, ''), //重写真实路径,替换/api
           rewrite: (path) => path.replace(new RegExp('^' + evnMap.VITE_APP_PROXY_BASE_API), ''), // 重写真实路径,替换/api
-
           bypass: (req, res, options) => {
             const proxyUrl = options.target + options.rewrite(req.url)
             console.log(`真实请求的完整地址proxyUrl: ${proxyUrl}`)
