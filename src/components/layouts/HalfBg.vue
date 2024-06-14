@@ -12,6 +12,7 @@ console.log(`output->randomItem`, randomItem)
 defineProps<{
   type: 'route' | 'article'
   info?: any
+  bg?: string
 }>()
 
 
@@ -22,6 +23,7 @@ defineProps<{
   <div class="w-full h-50vh flex justify-center items-center">
     <img :src="'/bg-' + randomItem + '.webp'" alt="" class="w-full h-full object-cover" />
     <NogiPageInfo :type="type" :info="info" />
+    {{ bg }}
   </div>
 </template>
 

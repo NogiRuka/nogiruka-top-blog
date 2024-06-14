@@ -8,7 +8,7 @@ defineProps<{
   <article class="my-4">
     <div class="flex flex-row text-black h-56 bg-cover overflow-hidden border-test">
       <!-- ARTICLE COVER -->
-      <RouterLink :to="'/articles/' + article.id" class="w-1/2">
+      <RouterLink :to="{path: '/articles/' + article.id, params: {bg: article.cover}}" class="w-1/2">
         <img :src="article.cover" alt="文章封面" class="w-full h-full object-cover" />
       </RouterLink>
       <!-- ARTICLE INFO -->
@@ -24,7 +24,7 @@ defineProps<{
               <section mr-4>
                 <span i-carbon-data-vis-1 />
                 <RouterLink :to="'/categories/' + article.category?.name">
-                  {{ article.category?.name ?? '暂无分类' }}
+                  {{ article.category?.name ?? $t('article.no_category') }}
                 </RouterLink>
               </section>
               <section flex>
@@ -37,7 +37,7 @@ defineProps<{
                 </div>
                 <div v-else>
                   <RouterLink to="/tags/undefined">
-                    暂无标签
+                    {{ $t('article.no_tag') }}
                   </RouterLink>
                 </div>
               </section>
@@ -46,12 +46,12 @@ defineProps<{
           <!-- ARTICLE TITLE -->
           <RouterLink :to="'/articles/' + article.id" :title="article.title">
             <h1 class="text-xl  font-bold truncate">
-              {{ article.title }}
+              {{ article.title ?? $t('article.no_title') }}
             </h1>
           </RouterLink>
           <!-- ARTICLE SUMMARY -->
           <div class="nogi-summary ">
-            {{ article.summary ?? '暂无简介' }}
+            {{ article.summary ?? $t('article.no_summary') }}
           </div>
         </div>
       </div>

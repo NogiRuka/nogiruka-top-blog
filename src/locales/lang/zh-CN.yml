@@ -36,3 +36,8 @@ global:
   search_result: 搜索结果
   search_no_result: 未找到相关结果
   search_no_more: 已经到底了
+article:
+  no_category: 暂无分类
+  no_tag: 暂无标签
+  no_title: 暂无标题
+  no_summary: 暂无简介

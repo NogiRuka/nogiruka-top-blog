@@ -1,39 +1,28 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { NotionRenderer } from 'vue-notion'
-import getArticle from '@/api/nogi-notion/getArticle'
-
-// prismjs
-import Prism from 'prismjs'
-import 'prismjs/themes/prism.min.css'
+import getArticle from '@/api/nogi-notion/getArticle';
+import { onMounted, ref } from "vue";
+import { NotionRenderer } from "vue3-notion";
 
 const props = defineProps<{
   id: string
 }>()
 
 console.log(`output->id`, props.id)
-let blockMap: any
+
+const data = ref()
 
 onMounted(async () => {
-  blockMap = await getArticle(props.id)
-  console.log(`output->blockMap`, blockMap)
-
-  var values = Object.values(blockMap)
-  var firstValue = values[0]
-
-  console.log(`output->firstValue`, firstValue)
-
-  setTimeout(() => {
-    Prism.highlightAll() // 全局代码高亮
-  }, 100)
+  data.value = await getArticle(props.id)
 })
 </script>
 
 <template>
-  <NotionRenderer :blockMap="blockMap" full-page prism />
+  <!-- <NotionRenderer :blockMap="blockMap" full-page prism /> -->
+  <NotionRenderer v-if="data" :blockMap="data" fullPage />
 </template>
 
 <style scoped lang="scss">
-/* optional Notion-like styles */
-@import 'vue-notion/src/styles.css';
+@import "vue3-notion/dist/style.css"; /* optional Notion-like styles */
+@import "prismjs/themes/prism.css";
+/* @import "katex/dist/katex.min.css"; */
 </style>

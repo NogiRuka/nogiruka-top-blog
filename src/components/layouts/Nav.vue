@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
-import { useI18n } from 'vue-i18n'
-import options from '@/locales/options'
+import options from '@/locales/options';
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 const { locale } = useI18n()
 
@@ -131,7 +131,7 @@ async function toggleLocale(l: string | undefined) {
 
 <template>
   <nav fixed w-full top-0 z-999 transition ease-out duration-300 :class="[{ 'nav-hide': navHide, 'text-white': textWhite }, '-translate-y-0']">
-    <div class="bg-transparent h-12 flex justify-between text-4 shadow-xl" :class="[{}, '']">
+    <div class=" h-12 flex justify-between text-4 shadow-xl" :class="[{}, '']">
       <!-- LEFT -->
       <div class="nav-left flex items-center">
         <RouterLink to="/">
@@ -229,8 +229,10 @@ async function toggleLocale(l: string | undefined) {
 }
 
 nav {
-  backdrop-filter: blur(8px) brightness(1.2);
-  -webkit-backdrop-filter: blur(8px) brightness(1.2);
+    // background-color: rgba(248, 248, 248, 0.4);
+    backdrop-filter: blur(10px);
+  // backdrop-filter: blur(8px) brightness(1.2);
+  // -webkit-backdrop-filter: blur(8px) brightness(1.2);
 }
 
 .nav-left {

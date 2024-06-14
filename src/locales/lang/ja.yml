@@ -1,11 +1,11 @@
 header:
   name: 乃木流架
   home: ホーム
-  articles: 文章
+  articles: ポスト
   archives: アーカイブ
-  categories: 分類
-  tags: ラベル
-  talks: それについて話します
+  categories: カテゴリー
+  tags: タグ
+  talks: 呟き
   about: について
   more: もっと
   messages: 伝言板
@@ -33,6 +33,11 @@ global:
   search_no_more: 終わりだ
 footer:
   base: このサイトは {day} 日 {hour} 時間 {minute} 分 {second} 秒間運営されており、ページビュー：
-  base1:  回、訪問者数：
-  base2:  人
+  base1: 回、訪問者数：
+  base2: 人
   text: © 2020-2021 NogiRuka.All Rights Reserved.
+article:
+  no_category: ''
+  no_tag: ''
+  no_summary: ''
+  no_title: ''

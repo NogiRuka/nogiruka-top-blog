@@ -13,9 +13,11 @@ header:
   timeline: Timeline
 footer:
   text: © 2020-2021 NogiRuka. All rights reserved.
-  base: The website has been running for {day} days {hour} hours {minute} minutes {second} seconds, with 
-  base1:  page views and
-  base2:  visitors.
+  base: >-
+    The website has been running for {day} days {hour} hours {minute} minutes
+    {second} seconds, with
+  base1: page views and
+  base2: visitors.
 hitokoto:
   loading: The next sentence is...?
 button:
@@ -36,3 +38,9 @@ global:
   search_result: search results
   search_no_result: No relevant results found
   search_no_more: It's the end
+article:
+  no_category: No category yet
+  no_tag: No tags yet
+  no_title: No title yet
+  no_summary: No summary yet
+

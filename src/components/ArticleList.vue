@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import NogiArticleItem from '@/components/nogi/NogiArticleItem.vue'
-import getArticles from '@/api/nogi-notion/getArticles'
+import getArticles from '@/api/nogi-notion/getArticles';
+import NogiArticleItem from '@/components/nogi/NogiArticleItem.vue';
 
 const articles = await getArticles()
 
-console.log(`output->articleslist`, articles)
+// console.log(`output->articleslist`, articles)
 </script>
 
 <template>

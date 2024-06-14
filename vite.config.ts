@@ -1,10 +1,10 @@
-import { resolve } from 'node:path'
-import { defineConfig, loadEnv } from 'vite'
-import Vue from '@vitejs/plugin-vue'
-import VueRouter from 'unplugin-vue-router/vite'
-import Layouts from 'vite-plugin-vue-layouts'
-import UnoCSS from 'unocss/vite'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
+import Vue from '@vitejs/plugin-vue'
+import { resolve } from 'node:path'
+import UnoCSS from 'unocss/vite'
+import VueRouter from 'unplugin-vue-router/vite'
+import { defineConfig, loadEnv } from 'vite'
+import Layouts from 'vite-plugin-vue-layouts'
 
 // https://vitejs.dev/config/
 export default defineConfig((env) => {
@@ -54,7 +54,7 @@ export default defineConfig((env) => {
             const proxyUrl = options.target + options.rewrite(req.url)
             console.log(`真实请求的完整地址proxyUrl: ${proxyUrl}`)
           },
-        },
+        }
       },
     },
     build: {

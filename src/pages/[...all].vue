@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    {{ $t('global.not-found') }}
+    {{ $t('global.not_found') }}
   </div>
 </template>
 
